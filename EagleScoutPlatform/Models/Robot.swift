@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Robot: Hashable {
+class Robot: Hashable, Identifiable {
     static func == (lhs: Robot, rhs: Robot) -> Bool {
         lhs.teamNum == rhs.teamNum
     }

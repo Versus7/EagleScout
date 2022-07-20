@@ -11,27 +11,18 @@ struct SearchView: View {
     @State var query: String = ""
     var body: some View {
         NavigationView {
-            VStack {
-                Spacer()
-                TextField(text: $query) {
-                    Label("Search Here", systemImage: "magnifyingglass")
-                }
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-
-                List {
-                    ForEach(TeamData.listOfTeams.filter {
-                        String($0.teamNum).contains(query) || String($0.teamName).contains(query) || query == ""
-                    }
-                            , id: \.self) { team in
-                        NavigationLink {
-                            RobotProfile(robot: team)
-                        } label: {
-                            ResultView(team: team)
-                        }
+            List {
+                ForEach(TeamData.listOfTeams.filter {
+                    String($0.teamNum).contains(query) || String($0.teamName).contains(query) || query == ""
+                }, id: \.self) { team in
+                    NavigationLink {
+                        RobotProfile(robot: team)
+                    } label: {
+                        ResultView(team: team)
                     }
                 }
-            }.navigationTitle("Search")
+            }.navigationTitle("Teams")
+                .searchable(text: $query)
         }
     }
 }

@@ -15,6 +15,8 @@ struct ScoutReportView: View {
     // temp variables
     @State var autoShots: Double = 0.0
     
+    @FocusState private var teamNumIsFocused: Bool
+    
     var body: some View {
         NavigationView {
             Form {
@@ -38,6 +40,7 @@ struct ScoutReportView: View {
                                 .onChange(of: teamNum) { newValue in
                                     report.teamNumber = Int(teamNum) ?? 0
                                 }
+                                .focused($teamNumIsFocused)
                             Spacer()
                         }
                         .font(.title)
@@ -69,6 +72,9 @@ struct ScoutReportView: View {
                     Toggle(isOn: $report.autoMovement, label: {
                         Text("Did they move during auto?")
                     })
+                    .onTapGesture {
+                        teamNumIsFocused = false
+                    }
                     if (report.autoMovement) {
                         ScoreStepper(score: $report.autoLow, name: "Low")
                         ScoreStepper(score: $report.autoHigh, name: "High")
