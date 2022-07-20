@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */; };
+		E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E52880D77F00E4375A /* ContentView.swift */; };
+		E8DBD1E82880D78100E4375A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBD1E72880D78100E4375A /* Assets.xcassets */; };
+		E8DBD1EB2880D78100E4375A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBD1EA2880D78100E4375A /* Preview Assets.xcassets */; };
+		E8DBD1F52880E52B00E4375A /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1F42880E52B00E4375A /* Robot.swift */; };
+		E8DBD1F72880E58200E4375A /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1F62880E58200E4375A /* Match.swift */; };
+		E8DBD1F92880E5B000E4375A /* RoundResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1F82880E5B000E4375A /* RoundResult.swift */; };
+		E8DBD1FD2880E61400E4375A /* RobotMatchSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1FC2880E61400E4375A /* RobotMatchSummary.swift */; };
+		E8DBD1FF2880EED300E4375A /* SmallMatchSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */; };
+		E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2012880FCDD00E4375A /* TeamData.swift */; };
+		E8DBD2042880FD5300E4375A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2032880FD5300E4375A /* SearchView.swift */; };
+		E8DBD20828810D4500E4375A /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20728810D4500E4375A /* MatchData.swift */; };
+		E8DBD20A28810EF100E4375A /* RobotProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20928810EF100E4375A /* RobotProfile.swift */; };
+		E8DBD20C288110CE00E4375A /* UpcomingRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20B288110CE00E4375A /* UpcomingRound.swift */; };
+		E8DBD20E288111F900E4375A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20D288111F900E4375A /* AppColors.swift */; };
+		E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2112881168600E4375A /* ScoutingReport.swift */; };
+		E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD213288116E900E4375A /* ClimbLevel.swift */; };
+		E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2152881174500E4375A /* ScoutReportView.swift */; };
+		E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FD44E02888960600B0CD80 /* SpeedResult.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleScoutPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleScoutPlatformApp.swift; sourceTree = "<group>"; };
+		E8DBD1E52880D77F00E4375A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8DBD1E72880D78100E4375A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8DBD1EA2880D78100E4375A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8DBD1F42880E52B00E4375A /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		E8DBD1F62880E58200E4375A /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		E8DBD1F82880E5B000E4375A /* RoundResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundResult.swift; sourceTree = "<group>"; };
+		E8DBD1FC2880E61400E4375A /* RobotMatchSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotMatchSummary.swift; sourceTree = "<group>"; };
+		E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallMatchSummary.swift; sourceTree = "<group>"; };
+		E8DBD2012880FCDD00E4375A /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
+		E8DBD2032880FD5300E4375A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E8DBD20728810D4500E4375A /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		E8DBD20928810EF100E4375A /* RobotProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotProfile.swift; sourceTree = "<group>"; };
+		E8DBD20B288110CE00E4375A /* UpcomingRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRound.swift; sourceTree = "<group>"; };
+		E8DBD20D288111F900E4375A /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		E8DBD2112881168600E4375A /* ScoutingReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingReport.swift; sourceTree = "<group>"; };
+		E8DBD213288116E900E4375A /* ClimbLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbLevel.swift; sourceTree = "<group>"; };
+		E8DBD2152881174500E4375A /* ScoutReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutReportView.swift; sourceTree = "<group>"; };
+		E8FD44E02888960600B0CD80 /* SpeedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedResult.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8DBD1DD2880D77F00E4375A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8DBD1D72880D77F00E4375A = {
+			isa = PBXGroup;
+			children = (
+				E8DBD1E22880D77F00E4375A /* EagleScoutPlatform */,
+				E8DBD1E12880D77F00E4375A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8DBD1E12880D77F00E4375A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8DBD1E22880D77F00E4375A /* EagleScoutPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD2002880FCCF00E4375A /* Data Sources */,
+				E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */,
+				E8DBD1E52880D77F00E4375A /* ContentView.swift */,
+				E8DBD1F32880E4B500E4375A /* Models */,
+				E8DBD1FB2880E60200E4375A /* Views */,
+				E8DBD1E72880D78100E4375A /* Assets.xcassets */,
+				E8DBD1E92880D78100E4375A /* Preview Content */,
+			);
+			path = EagleScoutPlatform;
+			sourceTree = "<group>";
+		};
+		E8DBD1E92880D78100E4375A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD1EA2880D78100E4375A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E8DBD1F32880E4B500E4375A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD1F42880E52B00E4375A /* Robot.swift */,
+				E8DBD1F62880E58200E4375A /* Match.swift */,
+				E8DBD2112881168600E4375A /* ScoutingReport.swift */,
+				E8DBD213288116E900E4375A /* ClimbLevel.swift */,
+				E8DBD1F82880E5B000E4375A /* RoundResult.swift */,
+				E8FD44E02888960600B0CD80 /* SpeedResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E8DBD1FB2880E60200E4375A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD1FC2880E61400E4375A /* RobotMatchSummary.swift */,
+				E8DBD20D288111F900E4375A /* AppColors.swift */,
+				E8DBD20928810EF100E4375A /* RobotProfile.swift */,
+				E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */,
+				E8DBD2032880FD5300E4375A /* SearchView.swift */,
+				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
+				E8DBD20B288110CE00E4375A /* UpcomingRound.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8DBD2002880FCCF00E4375A /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD2012880FCDD00E4375A /* TeamData.swift */,
+				E8DBD20728810D4500E4375A /* MatchData.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8DBD1DF2880D77F00E4375A /* EagleScoutPlatform */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DBD1EE2880D78100E4375A /* Build configuration list for PBXNativeTarget "EagleScoutPlatform" */;
+			buildPhases = (
+				E8DBD1DC2880D77F00E4375A /* Sources */,
+				E8DBD1DD2880D77F00E4375A /* Frameworks */,
+				E8DBD1DE2880D77F00E4375A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EagleScoutPlatform;
+			productName = EagleScoutPlatform;
+			productReference = E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8DBD1D82880D77F00E4375A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					E8DBD1DF2880D77F00E4375A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = E8DBD1DB2880D77F00E4375A /* Build configuration list for PBXProject "EagleScoutPlatform" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8DBD1D72880D77F00E4375A;
+			productRefGroup = E8DBD1E12880D77F00E4375A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8DBD1DF2880D77F00E4375A /* EagleScoutPlatform */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8DBD1DE2880D77F00E4375A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DBD1EB2880D78100E4375A /* Preview Assets.xcassets in Resources */,
+				E8DBD1E82880D78100E4375A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8DBD1DC2880D77F00E4375A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DBD1FF2880EED300E4375A /* SmallMatchSummary.swift in Sources */,
+				E8DBD2042880FD5300E4375A /* SearchView.swift in Sources */,
+				E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */,
+				E8DBD20E288111F900E4375A /* AppColors.swift in Sources */,
+				E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */,
+				E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */,
+				E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */,
+				E8DBD20C288110CE00E4375A /* UpcomingRound.swift in Sources */,
+				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
+				E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */,
+				E8DBD1F52880E52B00E4375A /* Robot.swift in Sources */,
+				E8DBD20A28810EF100E4375A /* RobotProfile.swift in Sources */,
+				E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */,
+				E8DBD1FD2880E61400E4375A /* RobotMatchSummary.swift in Sources */,
+				E8DBD1F92880E5B000E4375A /* RoundResult.swift in Sources */,
+				E8DBD1F72880E58200E4375A /* Match.swift in Sources */,
+				E8DBD20828810D4500E4375A /* MatchData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E8DBD1EC2880D78100E4375A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E8DBD1ED2880D78100E4375A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8DBD1EF2880D78100E4375A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EagleScoutPlatform/Preview Content\"";
+				DEVELOPMENT_TEAM = 2657G3FR97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.virnshah.EagleScoutPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8DBD1F02880D78100E4375A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EagleScoutPlatform/Preview Content\"";
+				DEVELOPMENT_TEAM = 2657G3FR97;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.virnshah.EagleScoutPlatform;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8DBD1DB2880D77F00E4375A /* Build configuration list for PBXProject "EagleScoutPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DBD1EC2880D78100E4375A /* Debug */,
+				E8DBD1ED2880D78100E4375A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8DBD1EE2880D78100E4375A /* Build configuration list for PBXNativeTarget "EagleScoutPlatform" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DBD1EF2880D78100E4375A /* Debug */,
+				E8DBD1F02880D78100E4375A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8DBD1D82880D77F00E4375A /* Project object */;
+}
