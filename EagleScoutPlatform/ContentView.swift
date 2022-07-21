@@ -16,7 +16,7 @@ struct ContentView: View {
                 }
 //            Text("Submit a Scouting Report")
             // TODO: Change ScoutReportView to show past reviews and a button to add a new review
-            ScoutReportView(report: ScoutingReport())
+            RobotDeadGesture()
                 .tabItem {
                     Label("Scout", systemImage: "plus.circle")
                 }
