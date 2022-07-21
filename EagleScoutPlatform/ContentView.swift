@@ -21,6 +21,7 @@ struct ContentView: View {
                     Label("Scout", systemImage: "plus.circle")
                 }
             Text("Upcoming Teams to Scout")
+//            SubmitLabels()
                 .tabItem {
                     Label("Upcoming", systemImage: "checklist")
                 }

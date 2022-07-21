@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
 		E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */; };
 		E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E52880D77F00E4375A /* ContentView.swift */; };
 		E8DBD1E82880D78100E4375A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBD1E72880D78100E4375A /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
 		E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleScoutPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleScoutPlatformApp.swift; sourceTree = "<group>"; };
 		E8DBD1E52880D77F00E4375A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */,
 				E8EAC8822888B61800AB4F5C /* SearchView.swift */,
 				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
+				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
 				E8DBD20B288110CE00E4375A /* UpcomingRound.swift */,
 			);
 			path = Views;
@@ -222,6 +225,7 @@
 				E8DBD1FD2880E61400E4375A /* RobotMatchSummary.swift in Sources */,
 				E8DBD1F92880E5B000E4375A /* RoundResult.swift in Sources */,
 				E8DBD1F72880E58200E4375A /* Match.swift in Sources */,
+				E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */,
 				E8DBD20828810D4500E4375A /* MatchData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

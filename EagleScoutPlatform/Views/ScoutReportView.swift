@@ -16,6 +16,7 @@ struct ScoutReportView: View {
     @State var autoShots: Double = 0.0
     
     @FocusState private var teamNumIsFocused: Bool
+    @FocusState private var roundNumIsFocused: Bool
     
     var body: some View {
         NavigationView {
@@ -32,6 +33,7 @@ struct ScoutReportView: View {
                                     newValue in
                                     report.roundNumber = Int(roundNum) ?? 0
                                 }
+                                .focused($roundNumIsFocused)
                             Spacer()
                             Spacer()
                             TextField("#000", text: $teamNum)
@@ -78,6 +80,7 @@ struct ScoutReportView: View {
                     if (report.autoMovement) {
                         ScoreStepper(score: $report.autoLow, name: "Low")
                         ScoreStepper(score: $report.autoHigh, name: "High")
+                        // TODO: Change this to textEditor for longer form text editing
                         TextField(text: $report.autoDescription) {
                             Text("Auto Description")
                         }
