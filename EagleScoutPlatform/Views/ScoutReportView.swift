@@ -78,13 +78,7 @@ struct ScoutReportView: View {
                         teamNumIsFocused = false
                     }
                     if (report.autoMovement) {
-                        ScoreStepper(score: $report.autoLow, name: "Low")
-                        ScoreStepper(score: $report.autoHigh, name: "High")
-                        // TODO: Change this to textEditor for longer form text editing
-                        TextField(text: $report.autoDescription) {
-                            Text("Auto Description")
-                        }
-
+                        RoundStageInfo(low: $report.autoLow, high: $report.autoHigh, description: $report.autoDescription, roundType: "Auto")
                     }
                 } header: {
                     Label("AUTO", systemImage: "desktopcomputer")
@@ -92,12 +86,7 @@ struct ScoutReportView: View {
                 
                 // Teleop Information
                 Section {
-                    ScoreStepper(score: $report.teleopLow, name: "Low")
-                    ScoreStepper(score: $report.teleopHigh, name: "High")
-                    TextField(text: $report.teleopDescription) {
-                        Text("Teleop Description")
-                    }
-
+                    RoundStageInfo(low: $report.teleopLow, high: $report.teleopHigh, description: $report.teleopDescription, roundType: "Teleop")
                 } header: {
                     Label("TELEOP", systemImage: "gamecontroller.fill")
                 }
@@ -177,24 +166,11 @@ struct ScoutReportView: View {
     }
 }
 
-struct ScoreStepper: View {
-    @Binding var score: Int
-    var name: String
-    var body: some View {
-        Stepper("\(name) Shots: \(score)") {
-            score += 1
-        } onDecrement: {
-            if (score > 0) {
-                score -= 1
-            }
-        }
-    }
-}
 
 struct ScoutReportView_Previews: PreviewProvider {
     @State static var a = ScoutingReport()
     static var previews: some View {
         ScoutReportView(report: $a)
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

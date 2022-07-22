@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
 		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
 		E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */; };
 		E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E52880D77F00E4375A /* ContentView.swift */; };
@@ -20,8 +21,6 @@
 		E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2012880FCDD00E4375A /* TeamData.swift */; };
 		E8DBD20828810D4500E4375A /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20728810D4500E4375A /* MatchData.swift */; };
 		E8DBD20A28810EF100E4375A /* RobotProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20928810EF100E4375A /* RobotProfile.swift */; };
-		E8DBD20C288110CE00E4375A /* UpcomingRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20B288110CE00E4375A /* UpcomingRound.swift */; };
-		E8DBD20E288111F900E4375A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD20D288111F900E4375A /* AppColors.swift */; };
 		E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2112881168600E4375A /* ScoutingReport.swift */; };
 		E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD213288116E900E4375A /* ClimbLevel.swift */; };
 		E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2152881174500E4375A /* ScoutReportView.swift */; };
@@ -30,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
 		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
 		E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleScoutPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleScoutPlatformApp.swift; sourceTree = "<group>"; };
@@ -44,8 +44,6 @@
 		E8DBD2012880FCDD00E4375A /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
 		E8DBD20728810D4500E4375A /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		E8DBD20928810EF100E4375A /* RobotProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotProfile.swift; sourceTree = "<group>"; };
-		E8DBD20B288110CE00E4375A /* UpcomingRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRound.swift; sourceTree = "<group>"; };
-		E8DBD20D288111F900E4375A /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E8DBD2112881168600E4375A /* ScoutingReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingReport.swift; sourceTree = "<group>"; };
 		E8DBD213288116E900E4375A /* ClimbLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbLevel.swift; sourceTree = "<group>"; };
 		E8DBD2152881174500E4375A /* ScoutReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutReportView.swift; sourceTree = "<group>"; };
@@ -119,13 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				E8DBD1FC2880E61400E4375A /* RobotMatchSummary.swift */,
-				E8DBD20D288111F900E4375A /* AppColors.swift */,
 				E8DBD20928810EF100E4375A /* RobotProfile.swift */,
 				E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */,
 				E8EAC8822888B61800AB4F5C /* SearchView.swift */,
 				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
+				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
 				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
-				E8DBD20B288110CE00E4375A /* UpcomingRound.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,12 +208,10 @@
 			files = (
 				E8DBD1FF2880EED300E4375A /* SmallMatchSummary.swift in Sources */,
 				E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */,
-				E8DBD20E288111F900E4375A /* AppColors.swift in Sources */,
 				E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */,
 				E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */,
 				E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */,
 				E8EAC8832888B61800AB4F5C /* SearchView.swift in Sources */,
-				E8DBD20C288110CE00E4375A /* UpcomingRound.swift in Sources */,
 				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
 				E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */,
 				E8DBD1F52880E52B00E4375A /* Robot.swift in Sources */,
@@ -226,6 +221,7 @@
 				E8DBD1F92880E5B000E4375A /* RoundResult.swift in Sources */,
 				E8DBD1F72880E58200E4375A /* Match.swift in Sources */,
 				E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */,
+				E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */,
 				E8DBD20828810D4500E4375A /* MatchData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
