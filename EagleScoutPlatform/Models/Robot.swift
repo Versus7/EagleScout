@@ -16,7 +16,8 @@ class Robot: Hashable, Identifiable {
     let teamName: String
     // configure image property later
     let description: String? = ""
-    let matches: [Match] = []
+    var matches: [Match] = []
+    var scoutingReports: [ScoutingReport] = []
     
     init(num: Int, name: String) {
         self.teamNum = num
@@ -28,5 +29,13 @@ class Robot: Hashable, Identifiable {
         hasher.combine(description)
         hasher.combine(teamName)
         hasher.combine(matches)
+    }
+    
+    func addMatch(match: Match) {
+        matches.append(match)
+    }
+    
+    func addScout(report: ScoutingReport) {
+        scoutingReports.append(report)
     }
 }

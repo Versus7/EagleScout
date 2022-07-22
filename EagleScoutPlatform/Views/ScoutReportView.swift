@@ -149,7 +149,10 @@ struct ScoutReportView: View {
                     Label("OVERVIEW", systemImage: "book.closed.fill")
                 }
                 
-                Button("Submit") {}
+                Button("Submit") {
+                    let associatedRobot = TeamData.findTeam(num: report.teamNumber)
+                    associatedRobot.addScout(report: report)
+                }
                     .frame(maxWidth: .infinity)
                     .buttonStyle(.automatic)
                     .disabled(!report.isLegalInput || !report.isFilledOut)

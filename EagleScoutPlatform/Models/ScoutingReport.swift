@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct ScoutingReport: Hashable {
+struct ScoutingReport: Hashable, Identifiable {
+    var id = UUID()
+    
     var teamNumber: Int = 0
     var roundNumber: Int = 0
     

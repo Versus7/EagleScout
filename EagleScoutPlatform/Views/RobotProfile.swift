@@ -31,17 +31,9 @@ struct RobotProfile: View {
                 .pickerStyle(.segmented)
             if personal {
                 ScrollView {
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-                    RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
-
+                    ForEach(robot.scoutingReports) { report in
+                        RobotMatchSummary(scout: report)
+                    }
                 }
             } else {
 //                    ForEach(robot.matches, id: \.self) { match in

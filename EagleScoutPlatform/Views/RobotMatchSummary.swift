@@ -8,24 +8,22 @@
 import SwiftUI
 
 struct RobotMatchSummary: View {
-    let autoPoints: Int
-    let teleopPoints: Int
-    let died: Bool
-    // eventually get this data from a ScoutReport instance
+    let scout: ScoutingReport
     // TODO: Change color of background from gray to something else.
     // TODO: Show the round number here.
+    // TODO: Show a circle filled with how the percentage of the match the robot was dead
     var body: some View {
         GroupBox {
             ZStack {
                 HStack {
                     Spacer()
-                    Text(String(autoPoints))
+                    Text(String(scout.autoLow + scout.autoHigh))
                     Spacer()
                     Spacer()
-                    Text(String(teleopPoints))
+                    Text(String(scout.teleopLow + scout.teleopHigh))
                     Spacer()
                 }.font(.largeTitle.bold())
-                if died {
+                if scout.dead {
                     HStack {
                         Spacer()
                         Image(systemName: "x.circle.fill")
@@ -51,7 +49,8 @@ struct RobotMatchSummary: View {
 }
 
 struct RobotMatchSummary_Previews: PreviewProvider {
+    static let a = ScoutingReport()
     static var previews: some View {
-        RobotMatchSummary(autoPoints: 10, teleopPoints: 50, died: false)
+        RobotMatchSummary(scout: a)
     }
 }
