@@ -15,14 +15,20 @@ struct RobotDeadGesture: View {
         TapGesture(count: 2)
             .onEnded { _ in self.tapped = !self.tapped }
     }
+    @State var a = ScoutingReport()
     
     var body: some View {
         ZStack {
-            ScoutReportView(report: ScoutingReport())
+            ScoutReportView(report: $a)
                 .gesture(tap)
+                .onChange(of: self.tapped) { newValue in
+                    a.dead = true
+                    a.timeDead = self.timeDead
+                }
             if self.tapped {
                 Rectangle()
                     .fill(Color.red)
+                    .ignoresSafeArea(.container, edges: .top)
                     .gesture(tap)
                     .transition(.scale.animation(.easeIn))
                 VStack {

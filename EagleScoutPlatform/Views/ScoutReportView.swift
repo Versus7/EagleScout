@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScoutReportView: View {
-    @State var report: ScoutingReport
+    @Binding var report: ScoutingReport
     @State var teamNum: String = ""
     @State var roundNum: String = ""
     
@@ -125,19 +125,19 @@ struct ScoutReportView: View {
                 }
                 
                 // TODO: Convert death to a gesture
-                Section {
-                    Toggle(isOn: $report.dead, label: {
-                        Text("Did they die?")
-                    })
-                    if (report.dead) {
-                        Slider(value: $report.timeDead, in: 0...195)
-                            .tint(report.timeDead > 130 ? Color.red : report.timeDead > 65 ? Color.orange: Color.green)
-                        Text(String(Int(report.timeDead)))
-                            .multilineTextAlignment(.center)
+                if (report.dead) {
+                    Section {
+                            HStack {
+                                Text("Time Dead: ")
+                                Text("\(report.timeDead, specifier: "%.2f")")
+                                    .monospacedDigit()
+                            }
+                            .font(.title)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.red)
+                    } header: {
+                        Text("DEATH")
                     }
-                } header: {
-                    Text("DEATH")
-                    // convert death to a gesture on the screen, maybe a double tap
                 }
                 
                 // Overview
@@ -192,8 +192,9 @@ struct ScoreStepper: View {
 }
 
 struct ScoutReportView_Previews: PreviewProvider {
+    @State static var a = ScoutingReport()
     static var previews: some View {
-        ScoutReportView(report: ScoutingReport())
+        ScoutReportView(report: $a)
             .preferredColorScheme(.dark)
     }
 }
