@@ -9,7 +9,7 @@ import Foundation
 
 struct ScoutingReport: Hashable {
     var teamNumber: Int = 0
-    var roundNumber: Int = 1
+    var roundNumber: Int = 0
     
     var dead: Bool = false
     var timeDead: Double = 0.0
@@ -34,11 +34,11 @@ struct ScoutingReport: Hashable {
     var driverSkill: Double = 0
     var gameComments: String = ""
     
-    var isComplete: Bool {
+    var isFilledOut: Bool {
         teamNumber != 0 && roundNumber != 0
     }
     
-    var legalBackgroundInfo: Bool {
-        (0...9999).contains(teamNumber) && (1...150).contains(roundNumber)
+    var isLegalInput: Bool {
+        (0...9999).contains(teamNumber) && (0...150).contains(roundNumber)
     }
 }

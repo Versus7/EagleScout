@@ -57,8 +57,8 @@ struct ScoutReportView: View {
                         }
                         .font(.caption)
                     }
-                    .foregroundColor(report.legalBackgroundInfo ? .primary : .red)
-                    if (!report.legalBackgroundInfo) {
+                    .foregroundColor(report.isLegalInput ? .primary : .red)
+                    if (!report.isLegalInput) {
                         Text("Error: Bad Input")
                             .font(.caption)
                             .foregroundColor(.red)
@@ -152,11 +152,18 @@ struct ScoutReportView: View {
                 Button("Submit") {}
                     .frame(maxWidth: .infinity)
                     .buttonStyle(.automatic)
-                    .disabled(!report.isComplete)
-                if (!report.isComplete) {
-                    Text("Please fill out round number and team number before submitting.")
-                        .font(.caption)
-                        .multilineTextAlignment(.center)
+                    .disabled(!report.isLegalInput || !report.isFilledOut)
+                if (!report.isLegalInput || !report.isFilledOut) {
+                    if (report.isFilledOut) {
+                       Text("Please correct your round or team number input.")
+                            .font(.caption)
+                            .multilineTextAlignment(.center)
+                    } else {
+                        Text("Please fill out round number and team number before submitting.")
+                            .font(.caption)
+                            .multilineTextAlignment(.center)
+                        
+                    }
 //                        .frame(maxWidth: .infinity)
                     
                 }
