@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
+		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
 		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
 		E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */; };
 		E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E52880D77F00E4375A /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
+		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
 		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
 		E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleScoutPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleScoutPlatformApp.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */,
 				E8EAC8822888B61800AB4F5C /* SearchView.swift */,
 				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
+				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
 				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
 				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
 			);
@@ -208,6 +211,7 @@
 			files = (
 				E8DBD1FF2880EED300E4375A /* SmallMatchSummary.swift in Sources */,
 				E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */,
+				E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */,
 				E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */,
 				E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */,
 				E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */,

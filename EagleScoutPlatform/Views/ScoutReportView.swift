@@ -15,6 +15,8 @@ struct ScoutReportView: View {
     // temp variables
     @State var autoShots: Double = 0.0
     
+    @State var isShowingTeleopSheet: Bool = false
+    
     @EnvironmentObject var teamData: TeamData
     
     @FocusState private var teamNumIsFocused: Bool
