@@ -25,11 +25,13 @@ struct SmallMatchSummary: View {
                     Spacer()
                     VStack {
                         Text(String(match.redScore))
+                            .monospacedDigit()
                             .font(.largeTitle.bold())
                             .foregroundColor(.red)
     //                        .shadow(color: customRed, radius: 1, x: 1, y: 1)
                         ForEach(match.redTeams, id: \.self) { team in
                             Text(String(team.teamNum))
+                                .monospacedDigit()
                         }.font(.caption)
                     }
                     Spacer()
@@ -39,6 +41,7 @@ struct SmallMatchSummary: View {
                     VStack {
                         Text(String(match.blueScore))
                             .font(.largeTitle.bold())
+                            .monospacedDigit()
                             .foregroundColor(.blue)
     //                        .shadow(color: customBlue, radius: 1, x: 1, y: 1)
                         ForEach(match.blueTeams, id: \.self) { team in
