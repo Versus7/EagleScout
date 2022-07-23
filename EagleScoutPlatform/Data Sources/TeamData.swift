@@ -7,26 +7,26 @@
 
 import Foundation
 
-struct TeamData {
-    static var listOfTeams: Set<Robot> = [
+class TeamData: ObservableObject {
+    @Published var listOfTeams: Set<Robot> = [
         Robot(num: 114, name: "Eaglestrike"),
         Robot(num: 300, name: "Gears"),
         Robot(num: 254, name: "Cheesy Poofs")
     ]
     
-    static private func addTeam(num: Int, name: String?) -> Robot {
+    private func addTeam(num: Int, name: String?) -> Robot {
         let insertResult: (Bool, Robot)
         if let n = name {
-            insertResult = TeamData.listOfTeams.insert(Robot(num: num, name: n))
+            insertResult = listOfTeams.insert(Robot(num: num, name: n))
             
         } else {
-            insertResult = TeamData.listOfTeams.insert(Robot(num: num, name: "Team \(num)"))
+            insertResult = listOfTeams.insert(Robot(num: num, name: "Team \(num)"))
         }
         return insertResult.1
     }
     
-    static func findTeam(num: Int) -> Robot {
-        let teamFound = TeamData.listOfTeams.first { Robot in Robot.teamNum == num}
+    func findTeam(num: Int) -> Robot {
+        let teamFound = listOfTeams.first { Robot in Robot.teamNum == num}
         
         guard let r = teamFound else {
             print("Robot not found! Creating robot...")

@@ -9,10 +9,11 @@ import SwiftUI
 
 struct SearchView: View {
     @State var query: String = ""
+    @EnvironmentObject var teamData: TeamData
     var body: some View {
         NavigationView {
             List {
-                ForEach(TeamData.listOfTeams.filter {
+                ForEach(teamData.listOfTeams.filter {
                     String($0.teamNum).contains(query) || String($0.teamName).contains(query) || query == ""
                 }, id: \.self) { team in
                     NavigationLink {

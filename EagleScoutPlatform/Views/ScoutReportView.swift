@@ -15,6 +15,8 @@ struct ScoutReportView: View {
     // temp variables
     @State var autoShots: Double = 0.0
     
+    @EnvironmentObject var teamData: TeamData
+    
     @FocusState private var teamNumIsFocused: Bool
     @FocusState private var roundNumIsFocused: Bool
     
@@ -150,7 +152,7 @@ struct ScoutReportView: View {
                 }
                 
                 Button("Submit") {
-                    let associatedRobot = TeamData.findTeam(num: report.teamNumber)
+                    let associatedRobot = teamData.findTeam(num: report.teamNumber)
                     associatedRobot.addScout(report: report)
                 }
                     .frame(maxWidth: .infinity)
