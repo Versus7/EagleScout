@@ -7,6 +7,8 @@
 
 import Foundation
 
-enum SpeedResult {
-    case slower, equal, faster
+enum SpeedResult: String {
+    case slower = "Slower"
+    case equal = "Equal"
+    case faster = "Faster"
 }

@@ -10,6 +10,7 @@
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
 		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
 		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
+		E8D82AB9288C79D20030AB48 /* ExpandedRobotMatchSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D82AB8288C79D20030AB48 /* ExpandedRobotMatchSummary.swift */; };
 		E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */; };
 		E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E52880D77F00E4375A /* ContentView.swift */; };
 		E8DBD1E82880D78100E4375A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8DBD1E72880D78100E4375A /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
 		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
 		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
+		E8D82AB8288C79D20030AB48 /* ExpandedRobotMatchSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedRobotMatchSummary.swift; sourceTree = "<group>"; };
 		E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleScoutPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleScoutPlatformApp.swift; sourceTree = "<group>"; };
 		E8DBD1E52880D77F00E4375A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8D82AB5288C79680030AB48 /* Summaries */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD1FC2880E61400E4375A /* RobotMatchSummary.swift */,
+				E8D82AB8288C79D20030AB48 /* ExpandedRobotMatchSummary.swift */,
+				E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */,
+			);
+			path = Summaries;
+			sourceTree = "<group>";
+		};
+		E8D82AB7288C79970030AB48 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
+				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
+				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
+				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		E8DBD1D72880D77F00E4375A = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +141,10 @@
 		E8DBD1FB2880E60200E4375A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E8DBD1FC2880E61400E4375A /* RobotMatchSummary.swift */,
+				E8D82AB7288C79970030AB48 /* Form */,
+				E8D82AB5288C79680030AB48 /* Summaries */,
 				E8DBD20928810EF100E4375A /* RobotProfile.swift */,
-				E8DBD1FE2880EED300E4375A /* SmallMatchSummary.swift */,
 				E8EAC8822888B61800AB4F5C /* SearchView.swift */,
-				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
-				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
-				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
-				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
 				E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */,
 				E8DBD1F52880E52B00E4375A /* Robot.swift in Sources */,
+				E8D82AB9288C79D20030AB48 /* ExpandedRobotMatchSummary.swift in Sources */,
 				E8DBD20A28810EF100E4375A /* RobotProfile.swift in Sources */,
 				E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */,
 				E8DBD1FD2880E61400E4375A /* RobotMatchSummary.swift in Sources */,

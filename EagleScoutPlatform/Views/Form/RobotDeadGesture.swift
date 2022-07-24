@@ -17,6 +17,8 @@ struct RobotDeadGesture: View {
     }
     @State var a = ScoutingReport()
     
+    // TODO: Add a timer to track when a robot is in the climbing phase
+    
     var body: some View {
         ZStack {
             ScoutReportView(report: $a)

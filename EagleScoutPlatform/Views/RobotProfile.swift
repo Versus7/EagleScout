@@ -30,9 +30,15 @@ struct RobotProfile: View {
             .padding(.top)
                 .pickerStyle(.segmented)
             if personal {
-                ScrollView {
-                    ForEach(robot.scoutingReports) { report in
-                        RobotMatchSummary(scout: report)
+                if robot.scoutingReports.count == 0 {
+                    GroupBox {
+                        Text("No scouting reports have been filled out for this robot.")
+                    }.padding()
+                } else {
+                    ScrollView {
+                        ForEach(robot.scoutingReports) { report in
+                            RobotMatchSummary(scout: report)
+                        }
                     }
                 }
             } else {

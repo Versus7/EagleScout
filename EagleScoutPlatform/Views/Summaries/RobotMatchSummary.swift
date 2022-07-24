@@ -34,14 +34,17 @@ struct RobotMatchSummary: View {
                 }
             }
         } label: {
-            HStack {
-                Spacer()
-                Text("AUTO")
-                Spacer()
-                Spacer()
-                Text("TELEOP")
-                Spacer()
-            }.font(.caption)
+            VStack {
+                Text("Round \(scout.roundNumber)")
+                HStack {
+                    Spacer()
+                    Text("AUTO")
+                    Spacer()
+                    Spacer()
+                    Text("TELEOP")
+                    Spacer()
+                }.font(.caption)
+            }
         }.padding(.horizontal)
 //        .foregroundColor(.black)
 //        .shadow(color: .gray, radius: 1, x: 2, y: 2)

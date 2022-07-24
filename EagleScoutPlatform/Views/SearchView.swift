@@ -41,5 +41,6 @@ struct ResultView: View {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
+            .environmentObject(TeamData())
     }
 }

@@ -25,12 +25,17 @@ struct ContentView: View {
                 .environmentObject(teamData)
                 
             Text("Upcoming Teams to Scout")
+//            Color.custom1
 //            SubmitLabels()
                 .tabItem {
                     Label("Upcoming", systemImage: "checklist")
                 }
         }
     }
+}
+
+extension Color {
+    static var custom1 = Color(red: 16.0/255.0, green: 45.0/255.0, blue: 180.0/255.0)
 }
 
 struct ContentView_Previews: PreviewProvider {

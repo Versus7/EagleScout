@@ -7,6 +7,10 @@
 
 import Foundation
 
-enum ClimbLevel {
-    case failed, low, mid, high, traversal
+enum ClimbLevel: String {
+    case failed = "Failed"
+    case low = "Low"
+    case mid = "Mid"
+    case high = "High"
+    case traversal = "Traversal"
 }
