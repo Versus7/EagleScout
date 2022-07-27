@@ -16,8 +16,8 @@ struct RoundStageInfo: View {
     
     var body: some View {
     // TODO: Change this to textEditor for longer form text editing
-        ScoreStepper(score: $low, name: "Low")
         ScoreStepper(score: $high, name: "High")
+        ScoreStepper(score: $low, name: "Low")
         Button("Show Full Screen Counter") {
             self.isShowingSheet = true
         }

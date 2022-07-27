@@ -10,6 +10,8 @@ import Foundation
 struct ScoutingReport: Hashable, Identifiable {
     var id = UUID()
     
+    var timeSubmitted: Date = .distantFuture
+    
     var teamNumber: Int = 0
     var roundNumber: Int = 0
     

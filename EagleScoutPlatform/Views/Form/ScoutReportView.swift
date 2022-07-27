@@ -18,6 +18,7 @@ struct ScoutReportView: View {
     @State var isShowingTeleopSheet: Bool = false
     
     @EnvironmentObject var teamData: TeamData
+    @EnvironmentObject var scoutData: ScoutData
     
     @FocusState private var teamNumIsFocused: Bool
     @FocusState private var roundNumIsFocused: Bool
@@ -168,6 +169,8 @@ struct ScoutReportView: View {
                 Button("Submit") {
                     let associatedRobot = teamData.findTeam(num: report.teamNumber)
                     associatedRobot.addScout(report: report)
+                    scoutData.addScout(report: report)
+                    report.timeSubmitted = .now
                 }
                     .frame(maxWidth: .infinity)
                     .buttonStyle(.automatic)

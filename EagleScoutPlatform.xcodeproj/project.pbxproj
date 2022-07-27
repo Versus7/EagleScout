@@ -10,6 +10,8 @@
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
 		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
 		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
+		E8B4603E28914CD800D836C7 /* PastScouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4603D28914CD800D836C7 /* PastScouts.swift */; };
+		E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4603F28914D6100D836C7 /* ScoutData.swift */; };
 		E8D82AB9288C79D20030AB48 /* ExpandedRobotMatchSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D82AB8288C79D20030AB48 /* ExpandedRobotMatchSummary.swift */; };
 		E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */; };
 		E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD1E52880D77F00E4375A /* ContentView.swift */; };
@@ -34,6 +36,8 @@
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
 		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
 		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
+		E8B4603D28914CD800D836C7 /* PastScouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastScouts.swift; sourceTree = "<group>"; };
+		E8B4603F28914D6100D836C7 /* ScoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutData.swift; sourceTree = "<group>"; };
 		E8D82AB8288C79D20030AB48 /* ExpandedRobotMatchSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedRobotMatchSummary.swift; sourceTree = "<group>"; };
 		E8DBD1E02880D77F00E4375A /* EagleScoutPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EagleScoutPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EagleScoutPlatformApp.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				E8D82AB5288C79680030AB48 /* Summaries */,
 				E8DBD20928810EF100E4375A /* RobotProfile.swift */,
 				E8EAC8822888B61800AB4F5C /* SearchView.swift */,
+				E8B4603D28914CD800D836C7 /* PastScouts.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E8DBD2012880FCDD00E4375A /* TeamData.swift */,
+				E8B4603F28914D6100D836C7 /* ScoutData.swift */,
 				E8DBD20728810D4500E4375A /* MatchData.swift */,
 			);
 			path = "Data Sources";
@@ -232,9 +238,11 @@
 				E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */,
 				E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */,
 				E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */,
+				E8B4603E28914CD800D836C7 /* PastScouts.swift in Sources */,
 				E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */,
 				E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */,
 				E8EAC8832888B61800AB4F5C /* SearchView.swift in Sources */,
+				E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */,
 				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
 				E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */,
 				E8DBD1F52880E52B00E4375A /* Robot.swift in Sources */,

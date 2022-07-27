@@ -8,21 +8,34 @@
 import SwiftUI
 
 struct ExpandedRobotMatchSummary: View {
+    // TODO: Add teleop, auto, climb, match descriptions here
     let scout: ScoutingReport
+    @EnvironmentObject var teamData: TeamData
     var body: some View {
-        NavigationView {
+//        NavigationView {
             Form {
+                HStack {
+                    Text("\(teamData.findTeam(num: scout.teamNumber).teamName)")
+                    .font(.title2)
+                    .foregroundColor(.gray)
+                    .padding(.horizontal)
+                    Spacer()
+                }
+
                 // Background Information
                 Section {
+                    Text("Time Submitted: \(scout.timeSubmitted.formatted())")
                     GroupBox {
                         HStack {
                             Spacer()
                             Text("\(scout.roundNumber)")
                                 .monospacedDigit()
+                                .font(.largeTitle.bold())
                             Spacer()
                             Spacer()
                             Text("\(scout.teamNumber)")
                                 .monospacedDigit()
+                                .font(.largeTitle.bold())
                             Spacer()
                         }
                         .font(.title)
@@ -76,10 +89,9 @@ struct ExpandedRobotMatchSummary: View {
                         }
                     } else {
                         GroupBox {
-                            HStack {
-                                Image(systemName: "x.circle")
-                                Text("No auto movement")
-                            }.foregroundColor(.red)
+                            Label("No Auto Movement", systemImage: "x.circle")
+                                .foregroundColor(.red)
+                                .font(.headline)
                                 .frame(maxWidth: .infinity)
                         }
                     }
@@ -145,6 +157,7 @@ struct ExpandedRobotMatchSummary: View {
                         GroupBox {
                             Label("Did not attempt to climb", systemImage: "x.circle")
                                 .foregroundColor(.red)
+                                .font(.headline)
                                 .frame(maxWidth: .infinity)
                         }
                     }
@@ -196,24 +209,43 @@ struct ExpandedRobotMatchSummary: View {
                             }.frame(maxWidth: .infinity)
                             .font(.title2)
                     }
-                    Text("Speed (compared to our robot)")
-                        .font(.caption)
-                        .frame(maxWidth: .infinity)
-//                    Picker("", selection: $report.speed) {
-//                        Text("Slower").tag(SpeedResult.slower)
-//                        Text("Equal").tag(SpeedResult.equal)
-//                        Text("Faster").tag(SpeedResult.faster)
-//                    }
-                    .pickerStyle(.segmented)
-                    Text("Driver skill: \(Int(scout.driverSkill))")
-                        .font(.caption)
-                        .frame(maxWidth: .infinity)
+                    HStack {
+                        Text("Driver skill:")
+                            .font(.title2)
+                            .padding()
+//                            .frame(maxWidth: .infinity)
+                        Group {
+                            Text(String(Int(scout.driverSkill)))
+                                .bold()
+                                .padding(.bottom)
+                            Text("/")
+                                .bold()
+                            Text("5")
+                                .bold()
+                                .padding(.top)
+                        }.font(.title)
+                            .foregroundColor({
+                                switch(Int(scout.driverSkill)) {
+                                case 0, 1:
+                                    return Color.red
+                                case 2:
+                                    return Color.orange
+                                case 3:
+                                    return Color.yellow
+                                case 4, 5:
+                                    return Color.green
+                                default:
+                                    return Color.black
+                                }
+                            }())
+                    }.frame(maxWidth: .infinity)
+//                        .foregroundStyle(LinearGradient(colors: [Color.custom1,.blue], startPoint: .leading, endPoint: .trailing))
 //                    Slider(value: $report.driverSkill, in: 0...5, step: 1)
                     
                 } header: {
                     Label("OVERVIEW", systemImage: "book.closed.fill")
                 }
-            }
+//            }
             .navigationTitle("Round #\(scout.roundNumber)")
         }
     }
@@ -221,5 +253,6 @@ struct ExpandedRobotMatchSummary: View {
 struct ExpandedRobotMatchSummary_Previews: PreviewProvider {
     static var previews: some View {
         ExpandedRobotMatchSummary(scout: ScoutingReport())
+            .environmentObject(TeamData())
     }
 }

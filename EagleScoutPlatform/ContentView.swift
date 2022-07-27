@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var teamData = TeamData()
+    @State var scoutData = ScoutData()
     var body: some View {
         TabView {
             SearchView()
@@ -22,6 +23,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Scout", systemImage: "plus.circle")
                 }
+                .environmentObject(teamData)
+                .environmentObject(scoutData)
+            PastScouts()
+                .tabItem {
+                    Label("Past Reports", systemImage: "text.book.closed.fill")
+                }
+                .environmentObject(scoutData)
                 .environmentObject(teamData)
                 
             Text("Upcoming Teams to Scout")

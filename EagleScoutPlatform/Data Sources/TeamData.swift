@@ -29,10 +29,10 @@ class TeamData: ObservableObject {
         let teamFound = listOfTeams.first { Robot in Robot.teamNum == num}
         
         guard let r = teamFound else {
-            print("Robot not found! Creating robot...")
+//            print("Robot not found! Creating robot...")
             return addTeam(num: num, name: nil)
         }
-        print(listOfTeams)
+//        print(listOfTeams)
         return r
     }
 }

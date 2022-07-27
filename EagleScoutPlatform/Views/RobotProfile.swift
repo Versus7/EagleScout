@@ -38,6 +38,7 @@ struct RobotProfile: View {
                     ScrollView {
                         ForEach(robot.scoutingReports) { report in
                             RobotMatchSummary(scout: report)
+                            // TODO: Fix robotmatchsummary round display bug (it displays them as all the same round)
                         }
                     }
                 }
