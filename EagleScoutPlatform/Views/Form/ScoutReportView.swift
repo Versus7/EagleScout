@@ -95,21 +95,33 @@ struct ScoutReportView: View {
                     Label("TELEOP", systemImage: "gamecontroller.fill")
                 }
                 
+                // Endgame information
                 Section {
                     Toggle(isOn: $report.attemptedClimb) {
                         Text("Attempted climb?")
                     }
                     
                     if (report.attemptedClimb) {
-                        Picker("Climb level", selection: $report.climbHeight) {
-                            Text("Traversal").tag(ClimbLevel.traversal)
-                            Text("High").tag(ClimbLevel.high)
-                            Text("Mid").tag(ClimbLevel.mid)
-                            Text("Low").tag(ClimbLevel.low)
-                            Text("Failed").tag(ClimbLevel.failed)
+                        Menu {
+                            Button("Traversal") {
+                                report.climbHeight = .traversal
+                            }
                             
-                        }.pickerStyle(.menu)
-                            .frame(maxWidth: .infinity)
+                            Button("High") {
+                                report.climbHeight = .high
+                            }
+                            
+                            Button("Mid") {
+                                report.climbHeight = .mid
+                            }
+                            
+                            Button("Low") {
+                                report.climbHeight = .low
+                            }
+                        } label: {
+                            Text("Robot Climb: \(report.climbHeight.rawValue)")
+                        }
+                        
                         Slider(value: $report.climbTime, in: 0...195)
                         Text("Time to climb: \(Int(report.climbTime)) seconds")
                     }
@@ -125,7 +137,7 @@ struct ScoutReportView: View {
                                 Text("\(report.timeDead, specifier: "%.2f")")
                                     .monospacedDigit()
                             }
-                            .font(.title)
+                            .font(.title2)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.red)
                     } header: {
