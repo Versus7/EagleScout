@@ -13,9 +13,7 @@ struct ScoutReportView: View {
     @State var roundNum: String = ""
     
     // temp variables
-    @State var autoShots: Double = 0.0
-    
-    @State var isShowingTeleopSheet: Bool = false
+    @State private var showingSubmitAlert: Bool = false
     
     @EnvironmentObject var teamData: TeamData
     @EnvironmentObject var scoutData: ScoutData
@@ -174,6 +172,7 @@ struct ScoutReportView: View {
                     report = ScoutingReport()
                     teamNum = ""
                     roundNum = ""
+                    showingSubmitAlert = true
                 }
                     .frame(maxWidth: .infinity)
                     .buttonStyle(.automatic)
@@ -191,9 +190,11 @@ struct ScoutReportView: View {
                     }
 //                        .frame(maxWidth: .infinity)
                     
-                } 
+                }
             }
             .navigationTitle("Round #\(report.roundNumber)")
+        }.alert(Text("Thanks for submitting!"), isPresented: $showingSubmitAlert) {
+            Button("OK", role: .cancel) {}
         }
     }
 }
