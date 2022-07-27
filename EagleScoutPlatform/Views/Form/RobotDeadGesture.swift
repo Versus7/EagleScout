@@ -63,6 +63,7 @@ struct RobotDeadGesture: View {
                         VStack {
                             Spacer()
                             Image(systemName: "x.circle")
+
                                 .font(.title2)
                                 .padding()
                         }
@@ -111,13 +112,15 @@ struct RobotDeadGesture: View {
                                 ZStack {
                                     Circle()
                                         .opacity(0.5)
+                                        .foregroundColor(.white)
                                         .frame(width: 100, height: 100, alignment: .center)
                                     Image(systemName: "exclamationmark.triangle.fill")
-//                                        .foregroundColor(.yellow)
+                                        .foregroundColor(.white)
                                         .font(.largeTitle)
                                 }
                                 Text("Time Dead")
                                     .font(.caption)
+                                    .foregroundColor(.white)
                             }
                         }.buttonStyle(.plain)
 
@@ -130,12 +133,14 @@ struct RobotDeadGesture: View {
                                     Circle()
                                         .opacity(0.5)
                                         .frame(width: 100, height: 100, alignment: .center)
+                                        .foregroundColor(.white)
                                     Image(systemName: "chart.bar.fill")
-//                                        .foregroundColor(Color.custom1)
+                                        .foregroundColor(Color.white)
                                         .font(.largeTitle)
                                 }
                                 Text("Climb Time")
                                     .font(.caption)
+                                    .foregroundColor(.white)
                             }
                         }.buttonStyle(.plain)
 
@@ -148,6 +153,7 @@ struct RobotDeadGesture: View {
                     VStack {
                         Spacer()
                         Image(systemName: "x.circle")
+                            .foregroundColor(.white)
                             .font(.title2)
                             .padding()
                     }
