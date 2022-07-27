@@ -122,7 +122,7 @@ struct ScoutReportView: View {
                         }
                         
                         Slider(value: $report.climbTime, in: 0...195)
-                        Text("Time to climb: \(Int(report.climbTime)) seconds")
+                        Text("Time to climb: \(report.climbTime, specifier: "%.2f") seconds")
                     }
                 } header: {
                     Label("ENDGAME", systemImage: "forward.fill")
