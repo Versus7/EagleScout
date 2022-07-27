@@ -167,10 +167,13 @@ struct ScoutReportView: View {
                 }
                 
                 Button("Submit") {
+                    report.timeSubmitted = .now
                     let associatedRobot = teamData.findTeam(num: report.teamNumber)
                     associatedRobot.addScout(report: report)
                     scoutData.addScout(report: report)
-                    report.timeSubmitted = .now
+                    report = ScoutingReport()
+                    teamNum = ""
+                    roundNum = ""
                 }
                     .frame(maxWidth: .infinity)
                     .buttonStyle(.automatic)
@@ -188,7 +191,7 @@ struct ScoutReportView: View {
                     }
 //                        .frame(maxWidth: .infinity)
                     
-                }
+                } 
             }
             .navigationTitle("Round #\(report.roundNumber)")
         }
