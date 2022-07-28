@@ -10,7 +10,6 @@ import SwiftUI
 struct RobotMatchSummary: View {
     let scout: ScoutingReport
     // TODO: Change color of background from gray to something else.
-    // TODO: Show the round number here.
     // TODO: Show a circle filled with how the percentage of the match the robot was dead
     var body: some View {
         GroupBox {
