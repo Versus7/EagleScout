@@ -36,7 +36,7 @@ struct PastScouts: View {
                         }
                         .padding()
                     }
-                }
+                }.onDelete { scoutReports.pastScoutingReports.remove(atOffsets: $0)}
             }.navigationTitle("Past Reports")
         }
     }
