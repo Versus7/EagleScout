@@ -97,5 +97,6 @@ struct LargeIncrementer_Previews: PreviewProvider {
     @State static var b = 0
     static var previews: some View {
         LargeIncrementer(high: $a, low: $b)
+            .preferredColorScheme(.dark)
     }
 }

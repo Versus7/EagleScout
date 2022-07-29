@@ -93,6 +93,15 @@
 			path = "Form Sections";
 			sourceTree = "<group>";
 		};
+		E891B9752893C32B00879843 /* Timer Views */ = {
+			isa = PBXGroup;
+			children = (
+				E891B9732893BED800879843 /* TimerView.swift */,
+				E891B9712893BDF600879843 /* TimerOption.swift */,
+			);
+			path = "Timer Views";
+			sourceTree = "<group>";
+		};
 		E8D82AB5288C79680030AB48 /* Summaries */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +120,7 @@
 				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
 				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
 				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
-				E891B9732893BED800879843 /* TimerView.swift */,
-				E891B9712893BDF600879843 /* TimerOption.swift */,
+				E891B9752893C32B00879843 /* Timer Views */,
 			);
 			path = Form;
 			sourceTree = "<group>";

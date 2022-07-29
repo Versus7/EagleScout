@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct RobotDeadGesture: View {
-    @State var tapped = false
-    @State var timeDead: Double = 0
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     var tap: some Gesture {
         TapGesture(count: 2)
@@ -18,10 +16,12 @@ struct RobotDeadGesture: View {
     @State var a = ScoutingReport()
     
     // custom view variables
+    @State var tapped = false
+    @State var timeDead: Double = 0
+    @State var climbTime: Double = 0
+    
     @State var deadTimerOn: Bool = false
     @State var climberTimerOn: Bool = false
-    
-    @State var climbTime: Double = 0
     
     var body: some View {
         ZStack {
