@@ -45,4 +45,8 @@ struct ScoutingReport: Hashable, Identifiable {
     var isLegalInput: Bool {
         (0...9999).contains(teamNumber) && (0...150).contains(roundNumber)
     }
+    
+//    static var LegalInput: (Int, Int) -> { (num1, num2) in
+//        (0...9999).contains(num1) && (0...150).contains(num2)
+//    }
 }

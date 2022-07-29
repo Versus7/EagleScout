@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
+		E820F719289344120099E126 /* BackgroundSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820F718289344120099E126 /* BackgroundSection.swift */; };
 		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
+		E891B96C2893B94200879843 /* AutoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96B2893B94200879843 /* AutoSection.swift */; };
+		E891B96E2893BA7F00879843 /* EndgameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96D2893BA7F00879843 /* EndgameSection.swift */; };
+		E891B9702893BCA000879843 /* RobotOverviewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96F2893BCA000879843 /* RobotOverviewSection.swift */; };
+		E891B9722893BDF600879843 /* TimerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B9712893BDF600879843 /* TimerOption.swift */; };
+		E891B9742893BED800879843 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B9732893BED800879843 /* TimerView.swift */; };
 		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
 		E8B4603E28914CD800D836C7 /* PastScouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4603D28914CD800D836C7 /* PastScouts.swift */; };
 		E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4603F28914D6100D836C7 /* ScoutData.swift */; };
@@ -34,7 +40,13 @@
 
 /* Begin PBXFileReference section */
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
+		E820F718289344120099E126 /* BackgroundSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSection.swift; sourceTree = "<group>"; };
 		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
+		E891B96B2893B94200879843 /* AutoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSection.swift; sourceTree = "<group>"; };
+		E891B96D2893BA7F00879843 /* EndgameSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndgameSection.swift; sourceTree = "<group>"; };
+		E891B96F2893BCA000879843 /* RobotOverviewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotOverviewSection.swift; sourceTree = "<group>"; };
+		E891B9712893BDF600879843 /* TimerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerOption.swift; sourceTree = "<group>"; };
+		E891B9732893BED800879843 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
 		E8B4603D28914CD800D836C7 /* PastScouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastScouts.swift; sourceTree = "<group>"; };
 		E8B4603F28914D6100D836C7 /* ScoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutData.swift; sourceTree = "<group>"; };
@@ -70,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E820F717289343FD0099E126 /* Form Sections */ = {
+			isa = PBXGroup;
+			children = (
+				E820F718289344120099E126 /* BackgroundSection.swift */,
+				E891B96B2893B94200879843 /* AutoSection.swift */,
+				E891B96D2893BA7F00879843 /* EndgameSection.swift */,
+				E891B96F2893BCA000879843 /* RobotOverviewSection.swift */,
+			);
+			path = "Form Sections";
+			sourceTree = "<group>";
+		};
 		E8D82AB5288C79680030AB48 /* Summaries */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,10 +106,13 @@
 		E8D82AB7288C79970030AB48 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				E820F717289343FD0099E126 /* Form Sections */,
 				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
 				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
 				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
 				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
+				E891B9732893BED800879843 /* TimerView.swift */,
+				E891B9712893BDF600879843 /* TimerOption.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -238,9 +264,12 @@
 				E8DBD1E62880D77F00E4375A /* ContentView.swift in Sources */,
 				E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */,
 				E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */,
+				E891B9722893BDF600879843 /* TimerOption.swift in Sources */,
 				E8B4603E28914CD800D836C7 /* PastScouts.swift in Sources */,
+				E891B96E2893BA7F00879843 /* EndgameSection.swift in Sources */,
 				E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */,
 				E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */,
+				E891B9742893BED800879843 /* TimerView.swift in Sources */,
 				E8EAC8832888B61800AB4F5C /* SearchView.swift in Sources */,
 				E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */,
 				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
@@ -250,11 +279,14 @@
 				E8DBD20A28810EF100E4375A /* RobotProfile.swift in Sources */,
 				E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */,
 				E8DBD1FD2880E61400E4375A /* RobotMatchSummary.swift in Sources */,
+				E891B9702893BCA000879843 /* RobotOverviewSection.swift in Sources */,
 				E8DBD1F92880E5B000E4375A /* RoundResult.swift in Sources */,
+				E891B96C2893B94200879843 /* AutoSection.swift in Sources */,
 				E8DBD1F72880E58200E4375A /* Match.swift in Sources */,
 				E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */,
 				E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */,
 				E8DBD20828810D4500E4375A /* MatchData.swift in Sources */,
+				E820F719289344120099E126 /* BackgroundSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

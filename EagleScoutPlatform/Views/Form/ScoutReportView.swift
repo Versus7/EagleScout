@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ScoutReportView: View {
     @Binding var report: ScoutingReport
-    @State var teamNum: String = ""
-    @State var roundNum: String = ""
     
     // temp variables
     @State private var showingSubmitAlert: Bool = false
@@ -25,67 +23,10 @@ struct ScoutReportView: View {
         NavigationView {
             Form {
                 // Background Information
-                Section {
-                    GroupBox {
-                        HStack {
-                            Spacer()
-                            TextField("000", text: $roundNum)
-                                .keyboardType(.numberPad)
-                                .multilineTextAlignment(.center)
-                                .onChange(of: roundNum) {
-                                    newValue in
-                                    report.roundNumber = Int(roundNum) ?? 0
-                                }
-                                .focused($roundNumIsFocused)
-                            Spacer()
-                            Spacer()
-                            TextField("#000", text: $teamNum)
-                                .keyboardType(.numberPad)
-                                .multilineTextAlignment(.center)
-                                .onChange(of: teamNum) { newValue in
-                                    report.teamNumber = Int(teamNum) ?? 0
-                                }
-                                .focused($teamNumIsFocused)
-                            Spacer()
-                        }
-                        .font(.title)
-                    } label: {
-                        HStack {
-                            Spacer()
-                            Text("Round Number")
-                            Spacer()
-                            Spacer()
-                            Text("Team Number")
-                            Spacer()
-                        }
-                        .font(.caption)
-                    }
-                    .foregroundColor(report.isLegalInput ? .primary : .red)
-                    if (!report.isLegalInput) {
-                        Text("Error: Bad Input")
-                            .font(.caption)
-                            .foregroundColor(.red)
-                            .frame(maxWidth: .infinity)
-                    }
-
-                } header: {
-                    Label("BACKGROUND", systemImage: "magnifyingglass")
-                }
+                BackgroundSection(reportRoundNumber: $report.roundNumber, reportTeamNumber: $report.teamNumber)
                 
                 // Auto Information
-                Section {
-                    Toggle(isOn: $report.autoMovement, label: {
-                        Text("Did they move during auto?")
-                    })
-                    .onTapGesture {
-                        teamNumIsFocused = false
-                    }
-                    if (report.autoMovement) {
-                        RoundStageInfo(low: $report.autoLow, high: $report.autoHigh, description: $report.autoDescription, roundType: "Auto")
-                    }
-                } header: {
-                    Label("AUTO", systemImage: "desktopcomputer")
-                }
+                AutoSection(autoMovement: $report.autoMovement, low: $report.autoLow, high: $report.autoHigh, description: $report.autoDescription)
                 
                 // Teleop Information
                 Section {
@@ -95,38 +36,7 @@ struct ScoutReportView: View {
                 }
                 
                 // Endgame information
-                Section {
-                    Toggle(isOn: $report.attemptedClimb) {
-                        Text("Attempted climb?")
-                    }
-                    
-                    if (report.attemptedClimb) {
-                        Menu {
-                            Button("Traversal") {
-                                report.climbHeight = .traversal
-                            }
-                            
-                            Button("High") {
-                                report.climbHeight = .high
-                            }
-                            
-                            Button("Mid") {
-                                report.climbHeight = .mid
-                            }
-                            
-                            Button("Low") {
-                                report.climbHeight = .low
-                            }
-                        } label: {
-                            Text("Robot Climb: \(report.climbHeight.rawValue)")
-                        }
-                        
-                        Slider(value: $report.climbTime, in: 0...195)
-                        Text("Time to climb: \(report.climbTime, specifier: "%.2f") seconds")
-                    }
-                } header: {
-                    Label("ENDGAME", systemImage: "forward.fill")
-                }
+                EndgameSection(attemptedClimb: $report.attemptedClimb, climbHeight: $report.climbHeight, climbTime: $report.climbTime)
                 
                 // TODO: Convert death to a gesture
                 if (report.dead) {
@@ -145,24 +55,7 @@ struct ScoutReportView: View {
                 }
                 
                 // Overview
-                Section {
-                    Text("Speed (compared to our robot)")
-                        .font(.caption)
-                        .frame(maxWidth: .infinity)
-                    Picker("", selection: $report.speed) {
-                        Text("Slower").tag(SpeedResult.slower)
-                        Text("Equal").tag(SpeedResult.equal)
-                        Text("Faster").tag(SpeedResult.faster)
-                    }
-                    .pickerStyle(.segmented)
-                    Text("Driver skill: \(Int(report.driverSkill))")
-                        .font(.caption)
-                        .frame(maxWidth: .infinity)
-                    Slider(value: $report.driverSkill, in: 0...5, step: 1)
-                    
-                } header: {
-                    Label("OVERVIEW", systemImage: "book.closed.fill")
-                }
+                RobotOverviewSection(speed: $report.speed, driverSkill: $report.driverSkill)
                 
                 Button("Submit") {
                     report.timeSubmitted = .now
@@ -170,8 +63,8 @@ struct ScoutReportView: View {
                     associatedRobot.addScout(report: report)
                     scoutData.addScout(report: report)
                     report = ScoutingReport()
-                    teamNum = ""
-                    roundNum = ""
+//                    teamNum = ""
+//                    roundNum = ""
                     showingSubmitAlert = true
                 }
                     .frame(maxWidth: .infinity)

@@ -39,63 +39,17 @@ struct RobotDeadGesture: View {
                 }
             if self.tapped {
                 if deadTimerOn {
-                    Rectangle()
-                        .fill(Color.red)
-                        .ignoresSafeArea()
-//                        .transition(.slide.animation(.linear))
-                    VStack {
-                        Text("Time Dead:")
-                            .font(.title)
-                        Text("\(timeDead, specifier: "%.2f")")
-                            .monospacedDigit()
-                            .font(.largeTitle)
-                            .padding()
-                            .onReceive(timer) { _ in
-                                timeDead += 0.01
-                            }
-                    }
-                    Button {
-                        deadTimerOn = false
-                        self.tapped = false
-                    } label: {
-                        VStack {
-                            Spacer()
-                            Image(systemName: "x.circle")
-
-                                .font(.title2)
-                                .padding()
+                    TimerView(fillColor: .red, elapsedTime: $timeDead, descriptor: "Time Dead: ", timerOn: $deadTimerOn, tapped: $tapped)
+                        .onReceive(timer) { _ in
+                            timeDead += 0.01
                         }
-                    }.buttonStyle(.plain)
-
                 } else if climberTimerOn {
-                    Rectangle()
-                        .fill(Color.blue)
-                        .ignoresSafeArea()
-                    
-                    VStack {
-                        Text("Time to Climb:")
-                            .font(.title)
-                        Text("\(climbTime, specifier: "%.2f")")
-                            .monospacedDigit()
-                            .font(.largeTitle)
-                            .padding()
-                            .onReceive(timer) { _ in
-                                climbTime += 0.01
-                            }
-                    }
-                    Button {
-                        climberTimerOn = false
-                        self.tapped = false
-                    } label: {
-                        VStack {
-                            Spacer()
-                            Image(systemName: "x.circle")
-                                .font(.title2)
-                                .padding()
+                    TimerView(fillColor: .blue, elapsedTime: $climbTime, descriptor: "Time to Climb:", timerOn: $climberTimerOn, tapped: $tapped)
+                        .onReceive(timer) { _ in
+                            climbTime += 0.01
                         }
-                    }.buttonStyle(.plain)
-                    
                 } else {
+                    // View allowing you to pick from a timer
                     Rectangle()
                         .fill(Color.custom1)
                         .ignoresSafeArea()
@@ -106,40 +60,14 @@ struct RobotDeadGesture: View {
                         Button {
                             deadTimerOn = true
                         } label: {
-                            VStack {
-                                ZStack {
-                                    Circle()
-                                        .opacity(0.5)
-                                        .foregroundColor(.white)
-                                        .frame(width: 100, height: 100, alignment: .center)
-                                    Image(systemName: "exclamationmark.triangle.fill")
-                                        .foregroundColor(.white)
-                                        .font(.largeTitle)
-                                }
-                                Text("Time Dead")
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                            }
+                            TimerOption(imageName: "exclamationmark.triangle.fill", caption: "Time Dead")
                         }.buttonStyle(.plain)
 
                         Spacer()
                         Button {
                             climberTimerOn = true
                         } label: {
-                            VStack {
-                                ZStack {
-                                    Circle()
-                                        .opacity(0.5)
-                                        .frame(width: 100, height: 100, alignment: .center)
-                                        .foregroundColor(.white)
-                                    Image(systemName: "chart.bar.fill")
-                                        .foregroundColor(Color.white)
-                                        .font(.largeTitle)
-                                }
-                                Text("Climb Time")
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                            }
+                            TimerOption(imageName: "chart.bar.fill", caption: "Climb Time")
                         }.buttonStyle(.plain)
 
                         Spacer()
