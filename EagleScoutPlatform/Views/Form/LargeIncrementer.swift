@@ -47,20 +47,12 @@ struct LargeIncrementer: View {
                             high -= 1
                         }
                     } label: {
-                        Rectangle()
-                            .opacity(0)
-                            .border(.red, width: 4)
-                            .overlay(Image(systemName: "minus").imageScale(.large))
-                            .foregroundColor(.red)
+                        IncrementerButtonLabel(fillColor: .red, imageName: "minus")
                     }
                     Button {
                         high += 1
                     } label: {
-                        Rectangle()
-                            .opacity(0)
-                            .border(.green, width: 4)
-                            .overlay(Image(systemName: "plus").imageScale(.large))
-                            .foregroundColor(.green)
+                        IncrementerButtonLabel(fillColor: .green, imageName: "plus")
                     }
                 }
                 HStack(alignment: .center, spacing: 2) {
@@ -69,22 +61,12 @@ struct LargeIncrementer: View {
                             low -= 1
                         }
                     } label: {
-                        Rectangle()
-//                            .foregroundColor(.accentColor)
-                            .opacity(0)
-                            .border(.red, width: 4)
-                            .overlay(Image(systemName: "minus").imageScale(.large))
-                            .foregroundColor(.red)
+                        IncrementerButtonLabel(fillColor: .red, imageName: "minus")
                     }
                     Button {
                         low += 1
                     } label: {
-                        Rectangle()
-//                            .foregroundColor(.green)
-                            .opacity(0)
-                            .border(.green, width: 4)
-                            .overlay(Image(systemName: "plus").imageScale(.large))
-                            .foregroundColor(.green)
+                        IncrementerButtonLabel(fillColor: .green, imageName: "plus")
                     }
                 }
             }
@@ -92,6 +74,17 @@ struct LargeIncrementer: View {
     }
 }
 
+struct IncrementerButtonLabel: View {
+    let fillColor: Color
+    let imageName: String
+    var body: some View {
+        Rectangle()
+            .opacity(0)
+            .border(fillColor, width: 4)
+            .overlay(Image(systemName: imageName).imageScale(.large))
+            .foregroundColor(fillColor)
+    }
+}
 struct LargeIncrementer_Previews: PreviewProvider {
     @State static var a = 0
     @State static var b = 0
