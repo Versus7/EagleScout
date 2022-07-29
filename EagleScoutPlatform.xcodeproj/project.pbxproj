@@ -115,12 +115,12 @@
 		E8D82AB7288C79970030AB48 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				E891B9752893C32B00879843 /* Timer Views */,
 				E820F717289343FD0099E126 /* Form Sections */,
 				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
 				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
 				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
 				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
-				E891B9752893C32B00879843 /* Timer Views */,
 			);
 			path = Form;
 			sourceTree = "<group>";
