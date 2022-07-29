@@ -31,12 +31,24 @@ struct ScoutReportView: View {
                 // Teleop Information
                 Section {
                     RoundStageInfo(low: $report.teleopLow, high: $report.teleopHigh, description: $report.teleopDescription, roundType: "Teleop")
+                    VStack {
+                        Text("Shot accuracy: \(Int(report.teleopShotAccuracy))%").padding(.top)
+                            .font(.headline)
+                        Slider(value: $report.teleopShotAccuracy, in: 0...100) {
+                            Text("OK")
+                        } minimumValueLabel: {
+                            Text("0")
+                        } maximumValueLabel: {
+                            Text("100")
+                        }
+                    }
+
                 } header: {
                     Label("TELEOP", systemImage: "gamecontroller.fill")
                 }
                 
                 // Endgame information
-                EndgameSection(attemptedClimb: $report.attemptedClimb, climbHeight: $report.climbHeight, climbTime: $report.climbTime)
+                EndgameSection(attemptedClimb: $report.attemptedClimb, climbHeight: $report.climbHeight, climbTime: $report.climbTime, climbComments: $report.climbComments)
                 
                 // TODO: Convert death to a gesture
                 if (report.dead) {

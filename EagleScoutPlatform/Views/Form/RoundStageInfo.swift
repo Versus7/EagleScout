@@ -25,8 +25,15 @@ struct RoundStageInfo: View {
             LargeIncrementer(high: $high, low: $low)
         }
 
-        TextField(text: $description) {
-            Text("\(roundType) Description")
+        ZStack {
+            if description == "" {
+                HStack {
+                    Text("Describe their \(roundType.lowercased()) here")
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+            }
+            TextEditor(text: $description)
         }
     }
 }
@@ -48,7 +55,7 @@ struct ScoreStepper: View {
 struct RoundStageInfo_Previews: PreviewProvider {
    @State static var a = 0
    @State static var b = 0
-   @State static var c = "Desc"
+   @State static var c = ""
     @State static var d = "Teleop"
     
     static var previews: some View {

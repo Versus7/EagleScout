@@ -9,7 +9,7 @@ import Foundation
 
 struct ScoutingReport: Hashable, Identifiable {
     var id = UUID()
-    
+    var user: String = "" // will hold the email address of the person who submit the form
     var timeSubmitted: Date = .distantFuture
     
     var teamNumber: Int = 0
@@ -18,22 +18,26 @@ struct ScoutingReport: Hashable, Identifiable {
     var dead: Bool = false
     var timeDead: Double = 0.0
     
+    // auto
     var autoMovement: Bool = false
     // TODO: Implement getters and setters that return the following values as nil if there was no auto movement
     var autoLow: Int = 0
     var autoHigh: Int = 0
     var autoDescription: String = ""
     
+    // teleop
     var teleopLow: Int = 0
     var teleopHigh: Int = 0
+    var teleopShotAccuracy: Double = 0.0
     var teleopDescription: String = ""
     
+    // endgame
     var attemptedClimb: Bool = false
     var climbHeight: ClimbLevel = .failed
     var climbTime: Double = 0.0
+    var climbComments: String = ""
     
-    var matchDescription: String = ""
-    
+    // general
     var speed: SpeedResult = .slower
     var driverSkill: Double = 0
     var gameComments: String = ""
