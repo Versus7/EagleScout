@@ -38,6 +38,7 @@ struct Incrementer: View {
                                     .foregroundColor(iconColor)
                                     .frame(width: 50, height: 35, alignment: .center)
                             }
+                                .disabled(a == 0)
                             Divider()
                             Button {
                                 a += 1
