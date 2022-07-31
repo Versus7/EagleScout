@@ -19,6 +19,7 @@ struct ScoreStepper: View {
                 .font(.title2)
             Incrementer(a: $score)
         }
+        .scaledToFill()
     }
 }
 
