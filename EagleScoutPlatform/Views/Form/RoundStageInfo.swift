@@ -20,9 +20,13 @@ struct RoundStageInfo: View {
             ScoreStepper(score: $high, name: "High")
             ScoreStepper(score: $low, name: "Low")
         }.frame(maxWidth: .infinity)
-        Button("Show Full Screen Counter") {
+        Button() {
             self.isShowingSheet = true
+        } label: {
+            Label("Show Counter", systemImage: "plus.forwardslash.minus")
         }
+        .buttonStyle(.bordered)
+        .frame(maxWidth: .infinity)
         .sheet(isPresented: $isShowingSheet) {
             LargeIncrementer(high: $high, low: $low)
         }
