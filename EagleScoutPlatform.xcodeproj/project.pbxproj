@@ -10,6 +10,8 @@
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
 		E820F719289344120099E126 /* BackgroundSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820F718289344120099E126 /* BackgroundSection.swift */; };
 		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
+		E87A8972289699AB000D11C0 /* ScoreStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A8971289699AB000D11C0 /* ScoreStepper.swift */; };
+		E87A89742896A046000D11C0 /* Incrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A89732896A046000D11C0 /* Incrementer.swift */; };
 		E891B96C2893B94200879843 /* AutoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96B2893B94200879843 /* AutoSection.swift */; };
 		E891B96E2893BA7F00879843 /* EndgameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96D2893BA7F00879843 /* EndgameSection.swift */; };
 		E891B9702893BCA000879843 /* RobotOverviewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96F2893BCA000879843 /* RobotOverviewSection.swift */; };
@@ -44,6 +46,8 @@
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
 		E820F718289344120099E126 /* BackgroundSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSection.swift; sourceTree = "<group>"; };
 		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
+		E87A8971289699AB000D11C0 /* ScoreStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStepper.swift; sourceTree = "<group>"; };
+		E87A89732896A046000D11C0 /* Incrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incrementer.swift; sourceTree = "<group>"; };
 		E891B96B2893B94200879843 /* AutoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSection.swift; sourceTree = "<group>"; };
 		E891B96D2893BA7F00879843 /* EndgameSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndgameSection.swift; sourceTree = "<group>"; };
 		E891B96F2893BCA000879843 /* RobotOverviewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotOverviewSection.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				E8DBD2152881174500E4375A /* ScoutReportView.swift */,
 				E826C236288C154C0023FA56 /* LargeIncrementer.swift */,
 				E81CB802288AF74700574FD3 /* RoundStageInfo.swift */,
+				E87A8971289699AB000D11C0 /* ScoreStepper.swift */,
+				E87A89732896A046000D11C0 /* Incrementer.swift */,
 				E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */,
 			);
 			path = Form;
@@ -286,6 +292,7 @@
 				E891B9742893BED800879843 /* TimerView.swift in Sources */,
 				E8EAC8832888B61800AB4F5C /* SearchView.swift in Sources */,
 				E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */,
+				E87A8972289699AB000D11C0 /* ScoreStepper.swift in Sources */,
 				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
 				E89C4E782895A2210065C2F5 /* TagView.swift in Sources */,
 				E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */,
@@ -299,6 +306,7 @@
 				E891B96C2893B94200879843 /* AutoSection.swift in Sources */,
 				E8DBD1F72880E58200E4375A /* Match.swift in Sources */,
 				E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */,
+				E87A89742896A046000D11C0 /* Incrementer.swift in Sources */,
 				E89C4E762895A1CB0065C2F5 /* Tag.swift in Sources */,
 				E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */,
 				E8DBD20828810D4500E4375A /* MatchData.swift in Sources */,

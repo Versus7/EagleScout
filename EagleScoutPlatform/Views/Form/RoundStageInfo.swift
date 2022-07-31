@@ -16,8 +16,14 @@ struct RoundStageInfo: View {
     
     var body: some View {
     // TODO: Change this to textEditor for longer form text editing
-        ScoreStepper(score: $high, name: "High")
-        ScoreStepper(score: $low, name: "Low")
+        HStack {
+            Spacer()
+            ScoreStepper(score: $high, name: "High")
+            Spacer()
+            Spacer()
+            ScoreStepper(score: $low, name: "Low")
+            Spacer()
+        }
         Button("Show Full Screen Counter") {
             self.isShowingSheet = true
         }
@@ -38,19 +44,6 @@ struct RoundStageInfo: View {
     }
 }
 
-struct ScoreStepper: View {
-    @Binding var score: Int
-    var name: String
-    var body: some View {
-        Stepper("\(name) Shots: \(score)") {
-            score += 1
-        } onDecrement: {
-            if (score > 0) {
-                score -= 1
-            }
-        }
-    }
-}
 
 struct RoundStageInfo_Previews: PreviewProvider {
    @State static var a = 0
