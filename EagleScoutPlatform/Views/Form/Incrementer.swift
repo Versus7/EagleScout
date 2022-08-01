@@ -11,6 +11,8 @@ struct Incrementer: View {
     @Binding var a: Int
     let spacerColor: Color
     let iconColor: Color
+    private let width: CGFloat = 100
+    private let height: CGFloat = 35
     
     init(value: Binding<Int>) {
         self._a = value
@@ -54,7 +56,7 @@ struct Incrementer: View {
                             } label: {
                                 Image(systemName: "minus")
                                     .foregroundColor(iconColor)
-                                    .frame(width: 50, height: 35, alignment: .center)
+                                    .frame(width: width/2, height: height, alignment: .center)
                             }
                                 .disabled(a == 0)
                             Divider()
@@ -63,12 +65,12 @@ struct Incrementer: View {
                             } label: {
                                 Image(systemName: "plus")
                                     .foregroundColor(iconColor)
-                                    .frame(width: 50, height: 35, alignment: .center)
+                                    .frame(width: width/2, height: height, alignment: .center)
                             }
                             Spacer()
                         }
                     }
-                    .frame(width: 100, height: 35, alignment: .center)
+                    .frame(width: width, height: height, alignment: .center)
             }
         }
     }
