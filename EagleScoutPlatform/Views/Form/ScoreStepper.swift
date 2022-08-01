@@ -17,7 +17,7 @@ struct ScoreStepper: View {
                 .foregroundColor(.gray)
             Text("\(score)")
                 .font(.title2)
-            Incrementer(a: $score)
+            Incrementer(value: $score)
         }
         .scaledToFill()
     }

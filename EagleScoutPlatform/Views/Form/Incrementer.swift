@@ -9,15 +9,33 @@ import SwiftUI
 
 struct Incrementer: View {
     @Binding var a: Int
-    let spacerColor: Color = .gray
-    let iconColor: Color = .black
+    let spacerColor: Color
+    let iconColor: Color
     
+    init(value: Binding<Int>) {
+        self._a = value
+        self.spacerColor = .gray
+        self.iconColor = .black
+    }
     
-//    init(a: Int) {
-//        self.a = $a
-//        foregroundColor = .black
-//        spacerColor = .gray
-//    }
+    init(value: Binding<Int>, iconColor: Color) {
+        self._a = value
+        self.iconColor = iconColor
+        self.spacerColor = .gray
+    }
+    
+    init(value: Binding<Int>, background: Color) {
+        self._a = value
+        self.spacerColor = background
+        self.iconColor = .gray
+    }
+    
+    init(value: Binding<Int>, iconColor: Color, background: Color) {
+        self._a = value
+        self.iconColor = iconColor
+        self.spacerColor = background
+    }
+    
     var body: some View {
         VStack {
             ZStack {
@@ -59,6 +77,6 @@ struct Incrementer: View {
 struct Incrementer_Previews: PreviewProvider {
     @State static var a: Int = 10
     static var previews: some View {
-        Incrementer(a: $a)
+        Incrementer(value: $a)
     }
 }
