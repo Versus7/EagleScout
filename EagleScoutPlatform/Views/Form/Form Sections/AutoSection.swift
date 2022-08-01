@@ -17,9 +17,6 @@ struct AutoSection: View {
             Toggle(isOn: $autoMovement, label: {
                 Text("Did they move during auto?")
             })
-//            .onTapGesture {
-//                teamNumIsFocused = false
-//            }
             if (autoMovement) {
                 RoundStageInfo(low: $low, high: $high, description: $description, roundType: "Auto")
             }

@@ -17,8 +17,13 @@ struct RoundStageInfo: View {
     var body: some View {
     // TODO: Change this to textEditor for longer form text editing
         HStack {
+            Spacer()
             ScoreStepper(score: $high, name: "High")
+            Spacer()
+            Divider()
+            Spacer()
             ScoreStepper(score: $low, name: "Low")
+            Spacer()
         }.frame(maxWidth: .infinity)
         Button() {
             self.isShowingSheet = true
