@@ -13,6 +13,7 @@ struct RoundStageInfo: View {
     @Binding var description: String
     @State var isShowingSheet: Bool = false
     let roundType: String
+    @FocusState var textFocused: Int?
     
     var body: some View {
     // TODO: Change this to textEditor for longer form text editing
@@ -40,11 +41,21 @@ struct RoundStageInfo: View {
             if description == "" {
                 HStack {
                     Text("Describe their \(roundType.lowercased()) here")
+                        .padding(.leading)
                         .foregroundColor(.gray)
                     Spacer()
                 }
             }
             TextEditor(text: $description)
+                .focused($textFocused, equals:2)
+                .toolbar {
+                    ToolbarItem(placement: .keyboard) {
+                        Button("Done") {
+                            textFocused = nil
+                        }.opacity(textFocused ?? 0 == 2 ? 1 : 0)
+                    }
+                }
+//            }
         }
     }
 }

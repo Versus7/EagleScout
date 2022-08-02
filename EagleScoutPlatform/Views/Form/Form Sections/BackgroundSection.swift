@@ -11,7 +11,9 @@ struct BackgroundSection: View {
     // personal variables
     @State var roundNum: String = ""
     @State var teamNum: String = ""
-    
+//    @FocusState private var roundFocused: Bool
+//    @FocusState private var teamNumFocused: Bool
+    @FocusState private var fieldFocused: Int?
     
     // form variables
     var reportLegality: Bool {
@@ -28,16 +30,17 @@ struct BackgroundSection: View {
                     Spacer()
                     TextField("000", text: $roundNum)
                         .keyboardType(.numberPad)
+                        .focused($fieldFocused, equals:0)
                         .multilineTextAlignment(.center)
                         .onChange(of: roundNum) {
                             newValue in
                             reportRoundNumber = Int(roundNum) ?? 0
                         }
-//                        .focused($roundNumIsFocused)
                     Spacer()
                     Spacer()
                     TextField("#000", text: $teamNum)
                         .keyboardType(.numberPad)
+                        .focused($fieldFocused, equals:1)
                         .multilineTextAlignment(.center)
                         .onChange(of: teamNum) { newValue in
                             reportTeamNumber = Int(teamNum) ?? 0
@@ -58,6 +61,42 @@ struct BackgroundSection: View {
                 .font(.caption)
             }
             .foregroundColor(reportLegality ? .primary : .red)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+//                    ToolbarItem(placement: .keyboard) {
+//                        Button {
+////                            if teamNumFocused {
+////                                roundFocused = true
+////                                teamNumFocused = false
+////                            }
+//                            fieldFocused! -= 1
+//                        } label: {
+//                            Image(systemName: "chevron.left")
+//                        }.disabled(fieldFocused == 0)
+////                    }
+////                    ToolbarItem(placement: .keyboard) {
+//                        Button {
+////                                if roundFocused {
+////                                roundFocused = false
+////                                teamNumFocused = true
+////                                }
+//                            fieldFocused! += 1
+//                        } label: {
+//                            Image(systemName: "chevron.right")
+//                        }
+//                        .disabled(fieldFocused == 1)
+////                    }
+                    Spacer()
+//                    ToolbarItem(placement: .keyboard) {
+                        Button {
+                            fieldFocused = nil
+                        } label: {
+                            Text("Done")
+                        }.opacity(fieldFocused ?? 3 < 2 ? 1: 0)
+//                    }
+                }
+            }
+//            }
             if (!reportLegality) {
                 Text("Error: Bad Input")
                     .font(.caption)
@@ -67,7 +106,7 @@ struct BackgroundSection: View {
 
         } header: {
             Label("BACKGROUND", systemImage: "magnifyingglass")
-        }
+    }
     }
 }
 
