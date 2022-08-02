@@ -64,28 +64,29 @@ struct BackgroundSection: View {
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
 //                    ToolbarItem(placement: .keyboard) {
-//                        Button {
+                        Button {
 ////                            if teamNumFocused {
 ////                                roundFocused = true
 ////                                teamNumFocused = false
-////                            }
-//                            fieldFocused! -= 1
-//                        } label: {
-//                            Image(systemName: "chevron.left")
-//                        }.disabled(fieldFocused == 0)
+//                            }
+                            fieldFocused! -= 1
+                        } label: {
+                            Image(systemName: "chevron.left")
+                        }.disabled(fieldFocused == 0)
+                        .opacity(fieldFocused ?? 3 < 2 ? 1: 0)
 ////                    }
 ////                    ToolbarItem(placement: .keyboard) {
-//                        Button {
+                        Button {
 ////                                if roundFocused {
 ////                                roundFocused = false
 ////                                teamNumFocused = true
 ////                                }
-//                            fieldFocused! += 1
-//                        } label: {
-//                            Image(systemName: "chevron.right")
-//                        }
-//                        .disabled(fieldFocused == 1)
-////                    }
+                            fieldFocused! += 1
+                        } label: {
+                            Image(systemName: "chevron.right")
+                        }
+                        .disabled(fieldFocused == 1)
+                        .opacity(fieldFocused ?? 3 < 2 ? 1: 0)
                     Spacer()
 //                    ToolbarItem(placement: .keyboard) {
                         Button {
