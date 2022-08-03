@@ -172,6 +172,7 @@ struct ScoutReportView: View {
                             }
                         }.buttonStyle(.plain)
                         }.transition(.scale(scale: 0, anchor: .topTrailing).animation(.easeInOut(duration: 0.5)))
+                            .zIndex(1)
                         
                     }
                 }
