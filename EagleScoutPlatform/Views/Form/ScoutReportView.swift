@@ -133,44 +133,46 @@ struct ScoutReportView: View {
                                 report.climbTime += 0.01
                             }
                     } else {
-                        // View allowing you to pick from a timer
-                        Rectangle()
-                            .fill(Color.custom1)
-                            .ignoresSafeArea()
-                            .transition(.scale.animation(.easeIn))
-                        HStack {
-                            Spacer()
-                            Button {
-                                deadTimerOn = true
-                            } label: {
-                                TimerOption(imageName: "exclamationmark.triangle.fill", caption: "Time Dead")
-                            }.buttonStyle(.plain)
-
-                            Spacer()
-                            Button {
-                                climberTimerOn = true
-                            } label: {
-                                TimerOption(imageName: "chart.bar.fill", caption: "Climb Time")
-                            }.buttonStyle(.plain)
-
-                            Spacer()
-                    }.transition(.scale.animation(.easeIn))
-                    // button to exit view
-                    Button {
-                        tapped = false
-                    } label: {
-                        GeometryReader { reader in
-                            VStack {
+                        Group {
+                            // View allowing you to pick from a timer
+                            Rectangle()
+                                .fill(Color.custom1)
+                                .ignoresSafeArea()
+                            HStack {
                                 Spacer()
-                                Image(systemName: "x.circle")
-                                    .foregroundColor(.white)
-                                    .font(.title2)
-                                    .frame(width: reader.size.width, height: 70, alignment: .center)
-//                                    .padding()
-                                    .contentShape(Rectangle())
+                                Button {
+                                    deadTimerOn = true
+                                } label: {
+                                    TimerOption(imageName: "exclamationmark.triangle.fill", caption: "Time Dead")
+                                }.buttonStyle(.plain)
+
+                                Spacer()
+                                Button {
+                                    climberTimerOn = true
+                                } label: {
+                                    TimerOption(imageName: "chart.bar.fill", caption: "Climb Time")
+                                }.buttonStyle(.plain)
+
+                                Spacer()
                             }
-                        }
-                    }.buttonStyle(.plain)
+                        // button to exit view
+                        Button {
+                            tapped = false
+                        } label: {
+                            GeometryReader { reader in
+                                VStack {
+                                    Spacer()
+                                    Image(systemName: "x.circle")
+                                        .foregroundColor(.white)
+                                        .font(.title2)
+                                        .frame(width: reader.size.width, height: 70, alignment: .center)
+    //                                    .padding()
+                                        .contentShape(Rectangle())
+                                }
+                            }
+                        }.buttonStyle(.plain)
+                        }.transition(.scale(scale: 0, anchor: .topTrailing).animation(.easeInOut(duration: 0.5)))
+                        
                     }
                 }
             }
