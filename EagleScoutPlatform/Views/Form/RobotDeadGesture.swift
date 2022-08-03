@@ -37,6 +37,12 @@ struct RobotDeadGesture: View {
                         a.climbTime = self.climbTime
                     }
                 }
+                .onChange(of: a.timeDead) { newValue in
+                    self.timeDead = newValue
+                }
+                .onChange(of: a.climbTime) { newValue in
+                    self.climbTime = newValue
+                }
             if self.tapped {
                 if deadTimerOn {
                     TimerView(fillColor: .red, elapsedTime: $timeDead, descriptor: "Time Dead: ", timerOn: $deadTimerOn, tapped: $tapped)
