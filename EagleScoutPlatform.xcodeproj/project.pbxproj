@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
+		E81FFAC828A06DD300F8C873 /* appViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81FFAC728A06DD300F8C873 /* appViewModel.swift */; };
 		E820F719289344120099E126 /* BackgroundSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820F718289344120099E126 /* BackgroundSection.swift */; };
 		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
 		E87A8972289699AB000D11C0 /* ScoreStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A8971289699AB000D11C0 /* ScoreStepper.swift */; };
@@ -44,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
+		E81FFAC628A0569400F8C873 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E81FFAC728A06DD300F8C873 /* appViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appViewModel.swift; sourceTree = "<group>"; };
 		E820F718289344120099E126 /* BackgroundSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSection.swift; sourceTree = "<group>"; };
 		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
 		E87A8971289699AB000D11C0 /* ScoreStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStepper.swift; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 		E8DBD1D72880D77F00E4375A = {
 			isa = PBXGroup;
 			children = (
+				E81FFAC628A0569400F8C873 /* README.md */,
 				E8DBD1E22880D77F00E4375A /* EagleScoutPlatform */,
 				E8DBD1E12880D77F00E4375A /* Products */,
 			);
@@ -166,6 +170,7 @@
 				E8DBD2002880FCCF00E4375A /* Data Sources */,
 				E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */,
 				E8DBD1E52880D77F00E4375A /* ContentView.swift */,
+				E81FFAC728A06DD300F8C873 /* appViewModel.swift */,
 				E8DBD1F32880E4B500E4375A /* Models */,
 				E8DBD1FB2880E60200E4375A /* Views */,
 				E8DBD1E72880D78100E4375A /* Assets.xcassets */,
@@ -314,6 +319,7 @@
 				E891B96C2893B94200879843 /* AutoSection.swift in Sources */,
 				E8DBD1F72880E58200E4375A /* Match.swift in Sources */,
 				E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */,
+				E81FFAC828A06DD300F8C873 /* appViewModel.swift in Sources */,
 				E87A89742896A046000D11C0 /* Incrementer.swift in Sources */,
 				E89C4E762895A1CB0065C2F5 /* Tag.swift in Sources */,
 				E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */,

@@ -8,31 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var teamData = TeamData()
-    @State var scoutData = ScoutData()
-    @State var a = ScoutingReport()
+    @StateObject var viewModel = appViewModel()
     var body: some View {
         TabView {
             SearchView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
-                .environmentObject(teamData)
+                .environmentObject(viewModel.teamData)
 //            Text("Submit a Scouting Report")
             // TODO: Change ScoutReportView to show past reviews and a button to add a new review
 //            RobotDeadGesture()
-            ScoutReportView(report: $a)
+            ScoutReportView(report: $viewModel.currentScoutReport)
                 .tabItem {
                     Label("Scout", systemImage: "plus.circle")
                 }
-                .environmentObject(teamData)
-                .environmentObject(scoutData)
+                .environmentObject(viewModel.teamData)
+                .environmentObject(viewModel.scoutData)
             PastScouts()
                 .tabItem {
                     Label("Past Reports", systemImage: "text.book.closed.fill")
                 }
-                .environmentObject(scoutData)
-                .environmentObject(teamData)
+                .environmentObject(viewModel.scoutData)
+                .environmentObject(viewModel.teamData)
                 
             Text("Upcoming Teams to Scout")
 //            Color.custom1
