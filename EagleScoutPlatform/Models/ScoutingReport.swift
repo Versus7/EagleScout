@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ScoutingReport: Hashable, Identifiable {
+struct ScoutingReport: Hashable, Identifiable, Codable {
     var id = UUID()
     var user: String = "" // will hold the email address of the person who submit the form
     var timeSubmitted: Date = .distantFuture

@@ -23,14 +23,16 @@ struct ContentView: View {
                 .tabItem {
                     Label("Scout", systemImage: "plus.circle")
                 }
-                .environmentObject(viewModel.teamData)
-                .environmentObject(viewModel.scoutData)
+                .environmentObject(viewModel)
+//                .environmentObject(viewModel.teamData)
+//                .environmentObject(viewModel.scoutData)
             PastScouts()
                 .tabItem {
                     Label("Past Reports", systemImage: "text.book.closed.fill")
                 }
-                .environmentObject(viewModel.scoutData)
-                .environmentObject(viewModel.teamData)
+                .environmentObject(viewModel)
+//                .environmentObject(viewModel.scoutData)
+//                .environmentObject(viewModel.teamData)
                 
             Text("Upcoming Teams to Scout")
 //            Color.custom1
@@ -38,6 +40,8 @@ struct ContentView: View {
                 .tabItem {
                     Label("Upcoming", systemImage: "checklist")
                 }
+        }.onAppear {
+            try! viewModel.load()
         }
     }
 }

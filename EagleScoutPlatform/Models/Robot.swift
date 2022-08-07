@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Robot: Hashable, Identifiable {
+class Robot: Hashable, Identifiable, Codable {
     static func == (lhs: Robot, rhs: Robot) -> Bool {
         lhs.teamNum == rhs.teamNum
     }
@@ -15,7 +15,7 @@ class Robot: Hashable, Identifiable {
     let teamNum: Int
     let teamName: String
     // configure image property later
-    let description: String? = ""
+    var description: String? = ""
     var matches: [Match] = []
     var scoutingReports: [ScoutingReport] = []
     

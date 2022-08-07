@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct PastScouts: View {
-    @EnvironmentObject var scoutReports: ScoutData
-    @EnvironmentObject var teamData: TeamData
+//    @EnvironmentObject var scoutReports: ScoutData
+//    @EnvironmentObject var teamData: TeamData
+    @EnvironmentObject var viewModel: appViewModel
     var body: some View {
         NavigationView {
             List {
-                ForEach(scoutReports.pastScoutingReports.sorted(by: { r, a in
+                ForEach(viewModel.scoutData.pastScoutingReports.sorted(by: { r, a in
                     r.roundNumber > a.roundNumber
                 }), id:\.self) { report in
                     NavigationLink {
                         ExpandedRobotMatchSummary(scout: report)
-                            .environmentObject(teamData)
+                            .environmentObject(viewModel.teamData)
                     } label: {
                         HStack(spacing: 0) {
                             Group {
@@ -32,11 +33,14 @@ struct PastScouts: View {
                                     .frame(minWidth: 40)
                                     .padding(.trailing)
                             }
-                            Text("\(teamData.findTeam(num: report.teamNumber).teamName)")
+                            Text("\(viewModel.teamData.findTeam(num: report.teamNumber).teamName)")
                         }
                         .padding()
                     }
-                }.onDelete { scoutReports.pastScoutingReports.remove(atOffsets: $0)}
+                }.onDelete { viewModel.scoutData.pastScoutingReports.remove(atOffsets: $0)
+                    try! viewModel.save()
+                    
+                }
             }.navigationTitle("Past Reports")
         }
     }

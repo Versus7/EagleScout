@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SpeedResult: String {
+enum SpeedResult: String, Codable {
     case slower = "Slower"
     case equal = "Equal"
     case faster = "Faster"

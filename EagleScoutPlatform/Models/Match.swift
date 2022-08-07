@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Match: Hashable {
+class Match: Hashable, Codable {
     static func == (lhs: Match, rhs: Match) -> Bool {
         return lhs.redTeams == rhs.redTeams
     }

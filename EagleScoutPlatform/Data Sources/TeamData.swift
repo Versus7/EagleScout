@@ -7,12 +7,31 @@
 
 import Foundation
 
-class TeamData: ObservableObject {
-    @Published var listOfTeams: Set<Robot> = [
-        Robot(num: 114, name: "Eaglestrike"),
-        Robot(num: 300, name: "Gears"),
-        Robot(num: 254, name: "Cheesy Poofs")
-    ]
+class TeamData: ObservableObject, Codable {
+    @Published var listOfTeams: Set<Robot>// = [
+//        Robot(num: 114, name: "Eaglestrike"),
+//        Robot(num: 300, name: "Gears"),
+//        Robot(num: 254, name: "Cheesy Poofs")
+//    ]
+    
+    init() {
+        self.listOfTeams = []
+    }
+    
+    enum CodingKeys: CodingKey {
+        case listOfTeams
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let data = try decoder.container(keyedBy: CodingKeys.self)
+        self.listOfTeams = try data.decode(Set<Robot>.self, forKey: .listOfTeams)
+        
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var encoderContainer = encoder.container(keyedBy: CodingKeys.self)
+        try encoderContainer.encode(listOfTeams, forKey: .listOfTeams)
+    }
     
     private func addTeam(num: Int, name: String?) -> Robot {
         let insertResult: (Bool, Robot)

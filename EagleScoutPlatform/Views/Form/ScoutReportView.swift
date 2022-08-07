@@ -13,8 +13,9 @@ struct ScoutReportView: View {
     // temp variables
     @State private var showingSubmitAlert: Bool = false
     
-    @EnvironmentObject var teamData: TeamData
-    @EnvironmentObject var scoutData: ScoutData
+//    @EnvironmentObject var teamData: TeamData
+//    @EnvironmentObject var scoutData: ScoutData
+    @EnvironmentObject var viewModel: appViewModel
     
     @FocusState private var teamNumIsFocused: Bool
     @FocusState private var roundNumIsFocused: Bool
@@ -79,13 +80,14 @@ struct ScoutReportView: View {
                     
                     Button("Submit") {
                         report.timeSubmitted = .now
-                        let associatedRobot = teamData.findTeam(num: report.teamNumber)
+                        let associatedRobot = viewModel.teamData.findTeam(num: report.teamNumber)
                         associatedRobot.addScout(report: report)
-                        scoutData.addScout(report: report)
+                        viewModel.scoutData.addScout(report: report)
                         report = ScoutingReport()
     //                    teamNum = ""
     //                    roundNum = ""
                         showingSubmitAlert = true
+                        try! viewModel.save()
                     }
                         .frame(maxWidth: .infinity)
                         .buttonStyle(.automatic)

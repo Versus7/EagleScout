@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ClimbLevel: String {
+enum ClimbLevel: String, Codable {
     case failed = "Failed"
     case low = "Low"
     case mid = "Mid"

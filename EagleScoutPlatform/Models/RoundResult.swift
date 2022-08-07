@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum RoundResult {
+enum RoundResult: Codable {
     case red, blue, tie
 }
