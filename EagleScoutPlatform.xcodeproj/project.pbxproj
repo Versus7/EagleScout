@@ -90,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E81FFAC328A0542800F8C873 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				E89C4E772895A2210065C2F5 /* TagView.swift */,
+				E89C4E752895A1CB0065C2F5 /* Tag.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
 		E820F717289343FD0099E126 /* Form Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,8 +203,7 @@
 				E8DBD20928810EF100E4375A /* RobotProfile.swift */,
 				E8EAC8822888B61800AB4F5C /* SearchView.swift */,
 				E8B4603D28914CD800D836C7 /* PastScouts.swift */,
-				E89C4E772895A2210065C2F5 /* TagView.swift */,
-				E89C4E752895A1CB0065C2F5 /* Tag.swift */,
+				E81FFAC328A0542800F8C873 /* Tags */,
 			);
 			path = Views;
 			sourceTree = "<group>";
