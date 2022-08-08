@@ -1,4 +1,4 @@
-# Why tis code needs MVVM
+# Why this code needs MVVM
 ## Model, View, View-Model
 
 The main reason that I'm thinking about implementing MVVM here is for persistence.
