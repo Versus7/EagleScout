@@ -39,6 +39,7 @@ struct PastScouts: View {
                     }
                 }.onDelete { viewModel.scoutData.pastScoutingReports.remove(atOffsets: $0)
                     try! viewModel.save()
+                    try! viewModel.load() // this reloading the data ensures that the list doesn't try and conjure up the deleted element
                     
                 }
             }.navigationTitle("Past Reports")
