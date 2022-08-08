@@ -10,6 +10,7 @@ import SwiftUI
 struct RobotProfile: View {
     let robot: Robot
     @State var personal: Bool = true
+    // TODO: Make it more fun!
     var body: some View {
         VStack {
             HStack {

@@ -13,6 +13,7 @@ struct EndgameSection: View {
     @Binding var climbTime: Double
     @Binding var climbComments: String
     
+    // TODO: Add focus field to dismiss comments here, too.
     var body: some View {
         Section {
             Toggle(isOn: $attemptedClimb) {

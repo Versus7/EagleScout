@@ -11,6 +11,7 @@ struct RobotMatchSummary: View {
     let scout: ScoutingReport
     // TODO: Change color of background from gray to something else.
     // TODO: Show a circle filled with how the percentage of the match the robot was dead
+    // TODO: Take a hint from Scrumdinger, maybe design these without using GroupBoxes.
     var body: some View {
         GroupBox {
             ZStack {

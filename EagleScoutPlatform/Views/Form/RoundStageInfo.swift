@@ -31,7 +31,7 @@ struct RoundStageInfo: View {
         } label: {
             Label("Show Counter", systemImage: "plus.forwardslash.minus")
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.automatic)
         .frame(maxWidth: .infinity)
         .sheet(isPresented: $isShowingSheet) {
             LargeIncrementer(high: $high, low: $low)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BackgroundSection: View {
     // personal variables
+    // TODO: Clear these variables when form has been submit.
     @State var roundNum: String = ""
     @State var teamNum: String = ""
 //    @FocusState private var roundFocused: Bool

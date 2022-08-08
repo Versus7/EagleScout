@@ -26,6 +26,11 @@ class TeamData: ObservableObject, Codable {
         let data = try decoder.container(keyedBy: CodingKeys.self)
         self.listOfTeams = try data.decode(Set<Robot>.self, forKey: .listOfTeams)
         
+        for team in listOfTeams {
+            if team.scoutingReports.isEmpty {
+                listOfTeams.remove(team)
+            }
+        }
     }
     
     func encode(to encoder: Encoder) throws {
@@ -53,5 +58,9 @@ class TeamData: ObservableObject, Codable {
         }
 //        print(listOfTeams)
         return r
+    }
+    
+    func deleteTeam(number: Int) {
+        listOfTeams.remove(findTeam(num: number))
     }
 }

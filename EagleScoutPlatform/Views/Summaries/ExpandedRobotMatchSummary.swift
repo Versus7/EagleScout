@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ExpandedRobotMatchSummary: View {
     // TODO: Add teleop, auto, climb, match descriptions here
+    // TODO: Fix climbing UI
+    // TODO: (In the future) Show tags
     let scout: ScoutingReport
     @EnvironmentObject var teamData: TeamData
     var body: some View {

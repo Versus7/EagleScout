@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchView: View {
     @State var query: String = ""
     @EnvironmentObject var teamData: TeamData
+    // TODO: Sort them by team number
     var body: some View {
         NavigationView {
             List {

@@ -14,6 +14,23 @@ class appViewModel: ObservableObject {
     @Published var scoutData = ScoutData()
     @Published var currentScoutReport = ScoutingReport()
     
+    func deleteScoutingReport(at index: IndexSet) {
+        let reportTeam = scoutData.pastScoutingReports[index.first!].teamNumber
+        let round = scoutData.pastScoutingReports[index.first!].roundNumber
+        
+        scoutData.pastScoutingReports.remove(atOffsets: index)
+        teamData.findTeam(num: reportTeam).scoutingReports.removeAll { a in
+            a.roundNumber == round
+        }
+        
+        if teamData.findTeam(num: reportTeam).scoutingReports.isEmpty {
+            teamData.deleteTeam(number: reportTeam)
+            print("Team deleted!")
+        }
+        
+    }
+    
+    // persistence code
     private var eaglescoutDiretory: URL {
         try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
     }

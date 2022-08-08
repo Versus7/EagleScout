@@ -10,6 +10,8 @@ import SwiftUI
 struct PastScouts: View {
 //    @EnvironmentObject var scoutReports: ScoutData
 //    @EnvironmentObject var teamData: TeamData
+    // TODO: Ability to search scouting reports
+    // TODO: Add a little header showing that round number is on the left, and team name is on the right
     @EnvironmentObject var viewModel: appViewModel
     var body: some View {
         NavigationView {
@@ -37,7 +39,9 @@ struct PastScouts: View {
                         }
                         .padding()
                     }
-                }.onDelete { viewModel.scoutData.pastScoutingReports.remove(atOffsets: $0)
+                }.onDelete {
+                    //viewModel.scoutData.pastScoutingReports.remove(atOffsets: $0)
+                    viewModel.deleteScoutingReport(at: $0)
                     try! viewModel.save()
                     try! viewModel.load() // this reloading the data ensures that the list doesn't try and conjure up the deleted element
                     
