@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81CB802288AF74700574FD3 /* RoundStageInfo.swift */; };
 		E81FFAC828A06DD300F8C873 /* appViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81FFAC728A06DD300F8C873 /* appViewModel.swift */; };
+		E81FFB0628A0D7C000F8C873 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81FFB0528A0D7C000F8C873 /* Tag.swift */; };
 		E820F719289344120099E126 /* BackgroundSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E820F718289344120099E126 /* BackgroundSection.swift */; };
 		E826C237288C154C0023FA56 /* LargeIncrementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E826C236288C154C0023FA56 /* LargeIncrementer.swift */; };
 		E87A8972289699AB000D11C0 /* ScoreStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A8971289699AB000D11C0 /* ScoreStepper.swift */; };
@@ -18,8 +19,6 @@
 		E891B9702893BCA000879843 /* RobotOverviewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B96F2893BCA000879843 /* RobotOverviewSection.swift */; };
 		E891B9722893BDF600879843 /* TimerOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B9712893BDF600879843 /* TimerOption.swift */; };
 		E891B9742893BED800879843 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E891B9732893BED800879843 /* TimerView.swift */; };
-		E89C4E762895A1CB0065C2F5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C4E752895A1CB0065C2F5 /* Tag.swift */; };
-		E89C4E782895A2210065C2F5 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C4E772895A2210065C2F5 /* TagView.swift */; };
 		E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */; };
 		E8B4603E28914CD800D836C7 /* PastScouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4603D28914CD800D836C7 /* PastScouts.swift */; };
 		E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B4603F28914D6100D836C7 /* ScoutData.swift */; };
@@ -47,6 +46,7 @@
 		E81CB802288AF74700574FD3 /* RoundStageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStageInfo.swift; sourceTree = "<group>"; };
 		E81FFAC628A0569400F8C873 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E81FFAC728A06DD300F8C873 /* appViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appViewModel.swift; sourceTree = "<group>"; };
+		E81FFB0528A0D7C000F8C873 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		E820F718289344120099E126 /* BackgroundSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSection.swift; sourceTree = "<group>"; };
 		E826C236288C154C0023FA56 /* LargeIncrementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeIncrementer.swift; sourceTree = "<group>"; };
 		E87A8971289699AB000D11C0 /* ScoreStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStepper.swift; sourceTree = "<group>"; };
@@ -56,8 +56,6 @@
 		E891B96F2893BCA000879843 /* RobotOverviewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotOverviewSection.swift; sourceTree = "<group>"; };
 		E891B9712893BDF600879843 /* TimerOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerOption.swift; sourceTree = "<group>"; };
 		E891B9732893BED800879843 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		E89C4E752895A1CB0065C2F5 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		E89C4E772895A2210065C2F5 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		E8A50D552889749B00C64A1F /* RobotDeadGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDeadGesture.swift; sourceTree = "<group>"; };
 		E8B4603D28914CD800D836C7 /* PastScouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastScouts.swift; sourceTree = "<group>"; };
 		E8B4603F28914D6100D836C7 /* ScoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutData.swift; sourceTree = "<group>"; };
@@ -96,8 +94,7 @@
 		E81FFAC328A0542800F8C873 /* Tags */ = {
 			isa = PBXGroup;
 			children = (
-				E89C4E772895A2210065C2F5 /* TagView.swift */,
-				E89C4E752895A1CB0065C2F5 /* Tag.swift */,
+				E81FFB0528A0D7C000F8C873 /* Tag.swift */,
 			);
 			path = Tags;
 			sourceTree = "<group>";
@@ -299,6 +296,7 @@
 				E8DBD2022880FCDD00E4375A /* TeamData.swift in Sources */,
 				E891B9722893BDF600879843 /* TimerOption.swift in Sources */,
 				E8B4603E28914CD800D836C7 /* PastScouts.swift in Sources */,
+				E81FFB0628A0D7C000F8C873 /* Tag.swift in Sources */,
 				E891B96E2893BA7F00879843 /* EndgameSection.swift in Sources */,
 				E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */,
 				E8DBD2122881168600E4375A /* ScoutingReport.swift in Sources */,
@@ -307,7 +305,6 @@
 				E8B4604028914D6100D836C7 /* ScoutData.swift in Sources */,
 				E87A8972289699AB000D11C0 /* ScoreStepper.swift in Sources */,
 				E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */,
-				E89C4E782895A2210065C2F5 /* TagView.swift in Sources */,
 				E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */,
 				E8DBD1F52880E52B00E4375A /* Robot.swift in Sources */,
 				E8D82AB9288C79D20030AB48 /* ExpandedRobotMatchSummary.swift in Sources */,
@@ -321,7 +318,6 @@
 				E8A50D562889749B00C64A1F /* RobotDeadGesture.swift in Sources */,
 				E81FFAC828A06DD300F8C873 /* appViewModel.swift in Sources */,
 				E87A89742896A046000D11C0 /* Incrementer.swift in Sources */,
-				E89C4E762895A1CB0065C2F5 /* Tag.swift in Sources */,
 				E81CB803288AF74700574FD3 /* RoundStageInfo.swift in Sources */,
 				E8DBD20828810D4500E4375A /* MatchData.swift in Sources */,
 				E820F719289344120099E126 /* BackgroundSection.swift in Sources */,
