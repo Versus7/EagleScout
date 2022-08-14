@@ -40,6 +40,7 @@
 		E8DBD214288116E900E4375A /* ClimbLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD213288116E900E4375A /* ClimbLevel.swift */; };
 		E8DBD2162881174500E4375A /* ScoutReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBD2152881174500E4375A /* ScoutReportView.swift */; };
 		E8EAC8832888B61800AB4F5C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EAC8822888B61800AB4F5C /* SearchView.swift */; };
+		E8F097A228A8C0920077F9E5 /* FeatureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F097A128A8C0920077F9E5 /* FeatureRow.swift */; };
 		E8FD44E12888960600B0CD80 /* SpeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FD44E02888960600B0CD80 /* SpeedResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		E8DBD213288116E900E4375A /* ClimbLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbLevel.swift; sourceTree = "<group>"; };
 		E8DBD2152881174500E4375A /* ScoutReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutReportView.swift; sourceTree = "<group>"; };
 		E8EAC8822888B61800AB4F5C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E8F097A128A8C0920077F9E5 /* FeatureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRow.swift; sourceTree = "<group>"; };
 		E8FD44E02888960600B0CD80 /* SpeedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				E8DBD2002880FCCF00E4375A /* Data Sources */,
 				E8DBD1E32880D77F00E4375A /* EagleScoutPlatformApp.swift */,
 				E8DBD1E52880D77F00E4375A /* ContentView.swift */,
+				E8F097A128A8C0920077F9E5 /* FeatureRow.swift */,
 				E81FFAC728A06DD300F8C873 /* appViewModel.swift */,
 				E8DBD1F32880E4B500E4375A /* Models */,
 				E8DBD1FB2880E60200E4375A /* Views */,
@@ -314,6 +317,7 @@
 				E8DBD20A28810EF100E4375A /* RobotProfile.swift in Sources */,
 				E8DBD1E42880D77F00E4375A /* EagleScoutPlatformApp.swift in Sources */,
 				E8DBD1FD2880E61400E4375A /* RobotMatchSummary.swift in Sources */,
+				E8F097A228A8C0920077F9E5 /* FeatureRow.swift in Sources */,
 				E891B9702893BCA000879843 /* RobotOverviewSection.swift in Sources */,
 				E8DBD1F92880E5B000E4375A /* RoundResult.swift in Sources */,
 				E891B96C2893B94200879843 /* AutoSection.swift in Sources */,

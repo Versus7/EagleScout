@@ -55,7 +55,6 @@ struct PastScouts_Previews: PreviewProvider {
     static var previews: some View {
         PastScouts()
             .preferredColorScheme(.dark)
-            .environmentObject(ScoutData())
-            .environmentObject(TeamData())
+            .environmentObject(appViewModel())
     }
 }
