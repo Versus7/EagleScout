@@ -52,14 +52,18 @@ struct ContentView: View {
                             .foregroundColor(Color.custom1)
                             .bold()
                             .padding()
-                    FeatureRow(imageName: "wifi.slash", title: "Offline First. Always.", description: "You never need a wifi connection to make and save scouting reports.", maxWidth: reader.size.width*0.6)
-                        .padding(.vertical)
-                    FeatureRow(imageName: "slider.horizontal.3", title: "UI that makes sense", description: "Our intuitive UI is so good, you won't even need to look down when tallying a robot's score.", maxWidth: reader.size.width*0.6)
-                        .padding(.vertical)
-                    FeatureRow(imageName: "person.circle", title: "Robot Profiles", description: "Everything you need to know about a robot, in one place. What's not to love?", maxWidth: reader.size.width*0.6)
-                        .padding(.vertical)
-                    FeatureRow(imageName: "list.number", title: "Upcoming Matches", description: "Never miss a scouting match again with our list of upcoming matches you need to scout.", maxWidth: reader.size.width*0.6)
-                        .padding(.vertical)
+                    Group {
+                        Spacer()
+                        FeatureRow(imageName: "wifi.slash", title: "Offline First. Always.", description: "You never need a wifi connection to make and save scouting reports.", maxWidth: reader.size.width*0.6)
+                        Spacer()
+                        FeatureRow(imageName: "slider.horizontal.3", title: "UI that makes sense", description: "Our intuitive UI is so good, you won't even need to look down when tallying a robot's score.", maxWidth: reader.size.width*0.6)
+
+                        Spacer()
+                        FeatureRow(imageName: "person.circle", title: "Robot Profiles", description: "Everything you need to know about a robot, in one place. What's not to love?", maxWidth: reader.size.width*0.6)
+
+                        Spacer()
+                        FeatureRow(imageName: "list.number", title: "Upcoming Matches", description: "Never miss a scouting match again with our list of upcoming matches you need to scout.", maxWidth: reader.size.width*0.6)
+                    }
                     Spacer()
                     Button {
                        welcomeScreen = false
