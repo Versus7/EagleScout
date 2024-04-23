@@ -1,5 +1,5 @@
 # EagleScout
-Note: Development of this repository has paused as a new version is in the works. Stay tuned!
+Note: Development of this repository has paused as a new version is in the works. Check out [EagleScout](https://github.com/EagleScoutDev/EagleScout) for the latest version.
 
 ## What is this?
 This is a proof-of-concept app that demonstrates how Team 114 (aka "Eaglestrike") could scout on iOS devices. This was created to try and improve the experience for our scouters, who typically use our scouting website on their phones. The questions inside are for the FRC 2022 Game *Rapid React*.
